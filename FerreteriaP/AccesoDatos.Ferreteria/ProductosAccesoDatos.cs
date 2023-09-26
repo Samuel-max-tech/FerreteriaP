@@ -15,7 +15,7 @@ namespace AccesoDatos.Ferreteria
         {
             conexion = new Conexion("localhost", "root", "", "Ferreteria", 3306);
         }
-        public List<Productos> ObtenerPermisos()
+        public List<Productos> ObtenerProducto()
         {
             var ListaProductos = new List<Productos>();
             var dt = new DataTable();
@@ -33,17 +33,17 @@ namespace AccesoDatos.Ferreteria
             }
             return ListaProductos;
         }
-        public void GuardarProductos(Productos nuevoproducto)
+        public void GuardarProducto(Productos nuevoproducto)
         {
-            string Consulta = string.Format("Insert Into productos values('{0}','{1}','{2}','{3}','{4}');",
+            string Consulta = string.Format("Insert Into productos values({0},'{1}','{2}','{3}','{4}');",
             nuevoproducto.CodigoBarras,nuevoproducto.Nombrep,nuevoproducto.Descripción,nuevoproducto.Marca);
             conexion.EjecutarConsulta(Consulta);
         }
-        public List<Productos> BuscarProdductos(string valor)
+        public List<Productos> BuscarProducto(string valor)
         {
             var ListaProductos = new List<Productos>();
             var dt = new DataTable();
-            var consulta = string.Format("Select * from productos where CodigoBarras like %'{0}'%", valor);
+            var consulta = string.Format("Select * from productos where CodigoBarras like %{0}%", valor);
             dt = conexion.ObtenerDatos(consulta);
             foreach (DataRow renglon in dt.Rows)
             {
@@ -58,15 +58,15 @@ namespace AccesoDatos.Ferreteria
             }
             return ListaProductos;
         }
-        public void EliminarProductos(string CodigoBarras)
+        public void EliminarProducto(int CodigoBarras)
         {
-            string consulta = string.Format("delete from productos where CodigoBarras = '{0}'", CodigoBarras);
+            string consulta = string.Format("delete from productos where CodigoBarras = {0}", CodigoBarras);
             conexion.EjecutarConsulta(consulta);
         }
-        public void ActualizarProductos(Productos NuevoProducto)
+        public void ActualizarProducto(Productos NuevoProducto)
         {
             string consulta = string.Format
-            ("update productos set CodigoBarras='{0}',nombre='{1}',agregar={2},descripción='{3}',marca='{4}'",
+            ("update productos set CodigoBarras={0},nombre='{1}',agregar={2},descripción='{3}',marca='{4}'",
             NuevoProducto.CodigoBarras,NuevoProducto.Nombrep,NuevoProducto.Descripción,NuevoProducto.Marca);
             conexion.EjecutarConsulta(consulta);
         }

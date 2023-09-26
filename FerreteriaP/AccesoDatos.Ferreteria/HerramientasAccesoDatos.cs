@@ -15,7 +15,7 @@ namespace AccesoDatos.Ferreteria
         {
             conexion = new Conexion("localhost", "root", "", "Ferreteria", 3306);
         }
-        public List<Herramientas> ObtenerHerramientas()
+        public List<Herramientas> ObtenerHerramienta()
         {
             var ListaHerramientas = new List<Herramientas>();
             var dt = new DataTable();
@@ -41,7 +41,7 @@ namespace AccesoDatos.Ferreteria
             nuevaherramienta.Medida,nuevaherramienta.MarcaH,nuevaherramienta.DescripciónH);
             conexion.EjecutarConsulta(Consulta);
         }
-        public List<Herramientas> BuscarHerramientas(int valor)
+        public List<Herramientas> BuscarHerramienta(int valor)
         {
             var ListaHerramientas = new List<Herramientas>();
             var dt = new DataTable();
@@ -61,12 +61,12 @@ namespace AccesoDatos.Ferreteria
             }
             return ListaHerramientas;
         }
-        public void EliminarHerramienta(string CodigoHerramienta)
+        public void EliminarHerramienta(int CodigoHerramienta)
         {
             string consulta = string.Format("delete from herramientas where CodigoHerramienta ={0}", CodigoHerramienta);
             conexion.EjecutarConsulta(consulta);
         }
-        public void ActualizarHerramientas(Herramientas NuevaHerramienta)
+        public void ActualizarHerramienta(Herramientas NuevaHerramienta)
         {
             string consulta = string.Format
             ("update herramietnas set CodigoHerramienta='{0}',nombre='{1}',medida={2},marca='{3}',descripción='{4}'",
