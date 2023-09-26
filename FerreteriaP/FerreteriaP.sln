@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34003.232
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FerreteriaP", "FerreteriaP\FerreteriaP.csproj", "{FB096CDF-35E4-4E71-9CE5-C52B3B838C12}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entidades", "Entidades\Entidades.csproj", "{5DF4E79E-A008-42FF-AAA1-DF36BD705B9A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FB096CDF-35E4-4E71-9CE5-C52B3B838C12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB096CDF-35E4-4E71-9CE5-C52B3B838C12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB096CDF-35E4-4E71-9CE5-C52B3B838C12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB096CDF-35E4-4E71-9CE5-C52B3B838C12}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5DF4E79E-A008-42FF-AAA1-DF36BD705B9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5DF4E79E-A008-42FF-AAA1-DF36BD705B9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5DF4E79E-A008-42FF-AAA1-DF36BD705B9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5DF4E79E-A008-42FF-AAA1-DF36BD705B9A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6475FF9B-0EE6-4001-82E0-F1C5861855F2}
+	EndGlobalSection
+EndGlobal
