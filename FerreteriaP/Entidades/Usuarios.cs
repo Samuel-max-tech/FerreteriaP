@@ -13,6 +13,7 @@ namespace Entidades
         private string _Apellidop;
         private string _Apellidom;
         private string _Fechanacimiento;
+        private string _Rfc;
         private string _Usuario;
         private string _Contrasena;
 
@@ -23,5 +24,6 @@ namespace Entidades
         public string Fechanacimiento { get => _Fechanacimiento; set => _Fechanacimiento = value; }
         public string Usuario { get => _Usuario; set => _Usuario = value; }
         public string Contrasena { get => _Contrasena; set => _Contrasena = value; }
+        public string Rfc { get => _Rfc; set => _Rfc = value; }
     }
 }
