@@ -33,6 +33,7 @@
             this.catalogosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.PermisosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.productosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.herramientasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -52,11 +53,13 @@
             this.catalogosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.usuariosToolStripMenuItem,
             this.PermisosToolStripMenuItem,
+            this.productosToolStripMenuItem,
             this.herramientasToolStripMenuItem});
             this.catalogosToolStripMenuItem.Image = global::Presentacion.Ferreteria.Properties.Resources.icons8_lista_30;
             this.catalogosToolStripMenuItem.Name = "catalogosToolStripMenuItem";
             this.catalogosToolStripMenuItem.Size = new System.Drawing.Size(88, 20);
             this.catalogosToolStripMenuItem.Text = "Catalogos";
+            this.catalogosToolStripMenuItem.Click += new System.EventHandler(this.catalogosToolStripMenuItem_Click);
             // 
             // usuariosToolStripMenuItem
             // 
@@ -64,19 +67,31 @@
             this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
             this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.usuariosToolStripMenuItem.Text = "Usuarios";
+            this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
             // 
             // PermisosToolStripMenuItem
             // 
+            this.PermisosToolStripMenuItem.Image = global::Presentacion.Ferreteria.Properties.Resources.icons8_gambler_10;
             this.PermisosToolStripMenuItem.Name = "PermisosToolStripMenuItem";
             this.PermisosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.PermisosToolStripMenuItem.Text = "Permisos";
+            this.PermisosToolStripMenuItem.Click += new System.EventHandler(this.PermisosToolStripMenuItem_Click);
+            // 
+            // productosToolStripMenuItem
+            // 
+            this.productosToolStripMenuItem.Image = global::Presentacion.Ferreteria.Properties.Resources.icons8_package_10;
+            this.productosToolStripMenuItem.Name = "productosToolStripMenuItem";
+            this.productosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.productosToolStripMenuItem.Text = "Productos";
+            this.productosToolStripMenuItem.Click += new System.EventHandler(this.herramientasToolStripMenuItem_Click);
             // 
             // herramientasToolStripMenuItem
             // 
+            this.herramientasToolStripMenuItem.Image = global::Presentacion.Ferreteria.Properties.Resources.icons8_full_tool_storage_box_10;
             this.herramientasToolStripMenuItem.Name = "herramientasToolStripMenuItem";
             this.herramientasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.herramientasToolStripMenuItem.Text = "Herramientas";
-            this.herramientasToolStripMenuItem.Click += new System.EventHandler(this.herramientasToolStripMenuItem_Click);
+            this.herramientasToolStripMenuItem.Click += new System.EventHandler(this.herramientasToolStripMenuItem_Click_1);
             // 
             // Principal
             // 
@@ -87,6 +102,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Principal";
             this.Text = "Principal";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -100,6 +116,7 @@
         private System.Windows.Forms.ToolStripMenuItem catalogosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem usuariosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem PermisosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem productosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem herramientasToolStripMenuItem;
     }
 }

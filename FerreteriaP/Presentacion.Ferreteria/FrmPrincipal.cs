@@ -21,5 +21,26 @@ namespace Presentacion.Ferreteria
         {
 
         }
+
+        private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmAgregarUsuarios fa = new FrmAgregarUsuarios();
+            fa.ShowDialog();
+        }
+
+        private void PermisosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void herramientasToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void catalogosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
