@@ -39,8 +39,8 @@ namespace AccesoDatos.Ferreteria
         }
         public void GuardarUsuario(Usuarios nuevousuario)
         {
-            string Consulta = string.Format("Insert Into usuarios values({0},'{1}','{2}','{3}','{4}','{5}','{6}','{7}');",
-            nuevousuario.IdUsuario,nuevousuario.Nombre,nuevousuario.Apellidop,nuevousuario.Apellidom,
+            string Consulta = string.Format("Insert Into usuarios values(null,'{0}','{1}','{2}','{3}','{4}','{5}','{6}');",
+            nuevousuario.Nombre,nuevousuario.Apellidop,nuevousuario.Apellidom,
             nuevousuario.Fechanacimiento,nuevousuario.Rfc,nuevousuario.Usuario,nuevousuario.Contrasena);
             conexion.EjecutarConsulta(Consulta);
         }
@@ -69,15 +69,15 @@ namespace AccesoDatos.Ferreteria
         }
         public void EliminarUsuarios(int idusuario)
         {
-            string consulta = string.Format("delete from usuarios where idusuario ={0}", idusuario);
+            string consulta = string.Format("delete from usuarios where idusuario = {0}", idusuario);
             conexion.EjecutarConsulta(consulta);
         }
         public void ActualizarUsuarios(Usuarios NuevoUsuario)
         {
             string consulta = string.Format
             ("update usuarios set nombre='{0}',apellidop='{1}',apellidom='{2}',fechanacimiento='{3}',rfc='{4}',usuario='{5}',contrasena='{6}' where idusuario={7}",
-                                NuevoUsuario.Nombre,NuevoUsuario.Apellidop,
-                                NuevoUsuario.Apellidom,NuevoUsuario.Fechanacimiento,NuevoUsuario.Rfc,NuevoUsuario.Usuario,NuevoUsuario.Contrasena,NuevoUsuario.IdUsuario);
+            NuevoUsuario.Nombre,NuevoUsuario.Apellidop,NuevoUsuario.Apellidom,NuevoUsuario.Fechanacimiento,NuevoUsuario.Rfc,NuevoUsuario.Usuario,NuevoUsuario.Contrasena,
+            NuevoUsuario.IdUsuario);
             conexion.EjecutarConsulta(consulta);
         }
 
