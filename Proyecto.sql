@@ -30,4 +30,5 @@ nombre VARCHAR(50),
 medida VARCHAR(50), 
 marca VARCHAR(50), 
 descripción VARCHAR(50));
+
 Select idusuario,nombre,apellidop,apellidom,fechanacimiento,rfc from usuarios;
