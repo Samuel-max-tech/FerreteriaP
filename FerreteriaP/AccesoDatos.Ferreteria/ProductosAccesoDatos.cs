@@ -24,7 +24,7 @@ namespace AccesoDatos.Ferreteria
             {
                 var producto = new Productos
                 {
-                    CodigoBarras = Convert.ToInt32(renglon["CodigoBarras"]),
+                    CodigoBarras = int.Parse(renglon["CodigoBarras"].ToString()),
                     Nombrep = renglon["nombre"].ToString(),
                     Descripción = renglon["descripción"].ToString(),
                     Marca = renglon["marca"].ToString(),
@@ -35,7 +35,7 @@ namespace AccesoDatos.Ferreteria
         }
         public void GuardarProducto(Productos nuevoproducto)
         {
-            string Consulta = string.Format("Insert Into productos values({0},'{1}','{2}','{3}','{4}');",
+            string Consulta = string.Format("Insert Into productos values({0},'{1}','{2}','{3}');",
             nuevoproducto.CodigoBarras,nuevoproducto.Nombrep,nuevoproducto.Descripción,nuevoproducto.Marca);
             conexion.EjecutarConsulta(Consulta);
         }
@@ -49,7 +49,7 @@ namespace AccesoDatos.Ferreteria
             {
                 var producto = new Productos
                 {
-                    CodigoBarras = Convert.ToInt32(renglon["CodigoBarras"]),
+                    CodigoBarras = int.Parse(renglon["CodigoBarras"].ToString()),
                     Nombrep = renglon["nombre"].ToString(),
                     Descripción = renglon["descripción"].ToString(),
                     Marca = renglon["marca"].ToString(),
@@ -66,7 +66,7 @@ namespace AccesoDatos.Ferreteria
         public void ActualizarProducto(Productos NuevoProducto)
         {
             string consulta = string.Format
-            ("update productos set CodigoBarras={0},nombre='{1}',agregar={2},descripción='{3}',marca='{4}'",
+            ("update productos set CodigoBarras={0},nombre='{1}',descripción='{2}',marca='{3}'",
             NuevoProducto.CodigoBarras,NuevoProducto.Nombrep,NuevoProducto.Descripción,NuevoProducto.Marca);
             conexion.EjecutarConsulta(consulta);
         }

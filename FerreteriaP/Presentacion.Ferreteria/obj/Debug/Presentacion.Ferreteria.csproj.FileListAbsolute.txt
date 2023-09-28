@@ -45,3 +45,6 @@ C:\Users\smart\OneDrive\Escritorio\FerreteriaP\FerreteriaP\Presentacion.Ferreter
 C:\Users\smart\OneDrive\Escritorio\FerreteriaP\FerreteriaP\Presentacion.Ferreteria\obj\Debug\Presentacion.Ferreteria.csproj.CopyComplete
 C:\Users\smart\OneDrive\Escritorio\FerreteriaP\FerreteriaP\Presentacion.Ferreteria\obj\Debug\Presentacion.Ferreteria.exe
 C:\Users\smart\OneDrive\Escritorio\FerreteriaP\FerreteriaP\Presentacion.Ferreteria\obj\Debug\Presentacion.Ferreteria.pdb
+C:\Users\smart\OneDrive\Escritorio\FerreteriaP\FerreteriaP\Presentacion.Ferreteria\obj\Debug\Presentacion.Ferreteria.FrmAgregarHerramienta.resources
+C:\Users\smart\OneDrive\Escritorio\FerreteriaP\FerreteriaP\Presentacion.Ferreteria\obj\Debug\Presentacion.Ferreteria.FrmAgregarProducto.resources
+C:\Users\smart\OneDrive\Escritorio\FerreteriaP\FerreteriaP\Presentacion.Ferreteria\obj\Debug\Presentacion.Ferreteria.FrmPricipal.resources

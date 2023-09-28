@@ -178,6 +178,7 @@
             this.DtgUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DtgUsuarios.Location = new System.Drawing.Point(12, 342);
             this.DtgUsuarios.Name = "DtgUsuarios";
+            this.DtgUsuarios.RowHeadersWidth = 62;
             this.DtgUsuarios.Size = new System.Drawing.Size(840, 231);
             this.DtgUsuarios.TabIndex = 44;
             this.DtgUsuarios.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DtgUsuarios_CellDoubleClick);
