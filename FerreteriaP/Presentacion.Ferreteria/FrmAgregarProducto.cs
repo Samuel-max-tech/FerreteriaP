@@ -175,11 +175,11 @@ namespace Presentacion.Ferreteria
             ControlarBotones(false, true, true, false, false);
             ControlCuadros(true);
             txtCB.Focus();
-            //txtCB.Text = DtgProductos.CurrentRow.Cells["CodigoBarras"].Value.ToString();
+            txtCB.Text = DtgProductos.CurrentRow.Cells["CodigoBarras"].Value.ToString();
             txtNombre.Text = DtgProductos.CurrentRow.Cells["nombre"].Value.ToString();
             txtDescripcion.Text = DtgProductos.CurrentRow.Cells["descripción"].Value.ToString();
             txtMarca.Text = DtgProductos.CurrentRow.Cells["marca"].Value.ToString();
-            codigobarras = DtgProductos.CurrentRow.Cells["CodigoBarras"].Value.ToString();
+            //codigobarras = DtgProductos.CurrentRow.Cells["CodigoBarras"].Value.ToString();
             banderaGuardar = "Modificar";
         }
     }
