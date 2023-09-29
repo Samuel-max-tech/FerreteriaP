@@ -9,15 +9,15 @@ namespace Entidades
     public class Herramientas
     {
         private int _CodigoHerramienta;
-        private string _NombreH;
-        private string _Medida;
-        private string _MarcaH;
-        private string _DescripciónH;
+        private string _Nombreh;
+        private string _Medidah;
+        private string _Marcah;
+        private string _Descripciónh;
 
         public int CodigoHerramienta { get => _CodigoHerramienta; set => _CodigoHerramienta = value; }
-        public string NombreH { get => _NombreH; set => _NombreH = value; }
-        public string Medida { get => _Medida; set => _Medida = value; }
-        public string MarcaH { get => _MarcaH; set => _MarcaH = value; }
-        public string DescripciónH { get => _DescripciónH; set => _DescripciónH = value; }
+        public string Nombreh { get => _Nombreh; set => _Nombreh = value; }
+        public string Medidah { get => _Medidah; set => _Medidah = value; }
+        public string Marcah { get => _Marcah; set => _Marcah = value; }
+        public string Descripcionh { get => _Descripciónh; set => _Descripciónh = value; }
     }
 }

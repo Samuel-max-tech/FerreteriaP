@@ -25,10 +25,10 @@ namespace AccesoDatos.Ferreteria
                 var herramientas = new Herramientas
                 {
                     CodigoHerramienta = Convert.ToInt32(renglon["CodigoHerramienta"]),
-                    NombreH = renglon["nombre"].ToString(),
-                    Medida = renglon["medida"].ToString(),
-                    MarcaH = renglon["marca"].ToString(),
-                    DescripciónH = renglon["descripción"].ToString(),
+                    Nombreh = renglon["nombreh"].ToString(),
+                    Medidah = renglon["medidah"].ToString(),
+                    Marcah = renglon["marcah"].ToString(),
+                    Descripcionh = renglon["descripcionh"].ToString(),
                 };
                 ListaHerramientas.Add(herramientas);
             }
@@ -37,11 +37,10 @@ namespace AccesoDatos.Ferreteria
         public void GuardarHerramienta(Herramientas nuevaherramienta)
         {
             string Consulta = string.Format("Insert Into herramientas values({0},'{1}','{2}','{3}','{4}');",
-            nuevaherramienta.CodigoHerramienta,nuevaherramienta.NombreH,
-            nuevaherramienta.Medida,nuevaherramienta.MarcaH,nuevaherramienta.DescripciónH);
+            nuevaherramienta.CodigoHerramienta,nuevaherramienta.Nombreh, nuevaherramienta.Medidah,nuevaherramienta.Marcah,nuevaherramienta.Descripcionh);
             conexion.EjecutarConsulta(Consulta);
         }
-        public List<Herramientas> BuscarHerramienta(int valor)
+        public List<Herramientas> BuscarHerramienta(string valor)
         {
             var ListaHerramientas = new List<Herramientas>();
             var dt = new DataTable();
@@ -52,10 +51,10 @@ namespace AccesoDatos.Ferreteria
                 var herramienta = new Herramientas
                 {
                     CodigoHerramienta = Convert.ToInt32(renglon["CodigoHerramienta"]),
-                    NombreH = renglon["nombre"].ToString(),
-                    Medida = renglon["medida"].ToString(),
-                    MarcaH = renglon["marca"].ToString(),
-                    DescripciónH = renglon["descripción"].ToString(),
+                    Nombreh = renglon["nombreh"].ToString(),
+                    Medidah = renglon["medidah"].ToString(),
+                    Marcah = renglon["marcah"].ToString(),
+                    Descripcionh = renglon["descripcionh"].ToString(),
                 };
                 ListaHerramientas.Add(herramienta);
             }
@@ -69,9 +68,8 @@ namespace AccesoDatos.Ferreteria
         public void ActualizarHerramienta(Herramientas NuevaHerramienta)
         {
             string consulta = string.Format
-            ("update herramietnas set CodigoHerramienta='{0}',nombre='{1}',medida={2},marca='{3}',descripción='{4}'",
-            NuevaHerramienta.CodigoHerramienta,NuevaHerramienta.NombreH,
-            NuevaHerramienta.Medida,NuevaHerramienta.MarcaH,NuevaHerramienta.DescripciónH);
+            ("update herramientas set nombreh='{0}',medidah='{1}',marca='{2}',descripcionh='{3}' where CodigoHerramienta = {4}",
+            NuevaHerramienta.Nombreh,NuevaHerramienta.Medidah,NuevaHerramienta.Marcah,NuevaHerramienta.Descripcionh, NuevaHerramienta.CodigoHerramienta);
             conexion.EjecutarConsulta(consulta);
         }
     }

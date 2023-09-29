@@ -86,6 +86,7 @@ namespace Presentacion.Ferreteria
         private void ModificarUsuario()
         {
             Usuarios nuevousuario = new Usuarios();
+            nuevousuario.IdUsuario = idusuarios;
             nuevousuario.Nombre = txtNombre.Text;
             nuevousuario.Apellidop = txtApellidoP.Text;
             nuevousuario.Apellidom = txtApellidoM.Text;

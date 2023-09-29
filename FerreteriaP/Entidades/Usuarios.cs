@@ -22,8 +22,8 @@ namespace Entidades
         public string Apellidop { get => _Apellidop; set => _Apellidop = value; }
         public string Apellidom { get => _Apellidom; set => _Apellidom = value; }
         public string Fechanacimiento { get => _Fechanacimiento; set => _Fechanacimiento = value; }
+        public string Rfc { get => _Rfc; set => _Rfc = value; }
         public string Usuario { get => _Usuario; set => _Usuario = value; }
         public string Contrasena { get => _Contrasena; set => _Contrasena = value; }
-        public string Rfc { get => _Rfc; set => _Rfc = value; }
     }
 }

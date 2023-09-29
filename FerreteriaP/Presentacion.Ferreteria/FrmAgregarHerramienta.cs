@@ -16,7 +16,7 @@ namespace Presentacion.Ferreteria
     {
         private HerramientasLogica _herramientaslogica;
         private string banderaGuardar = " ";
-        private int codigoherramientas = 0;
+        private int codigoherramientas = 0 ;
         public FrmAgregarHerramienta()
         {
             InitializeComponent();
@@ -50,14 +50,14 @@ namespace Presentacion.Ferreteria
             txtMedida.Text = "";
             txtDescripcion.Text = "";
         }
-        private void GuardarProducto()
+        private void GuardarHerramienta()
         {
             Herramientas nuevaherramienta = new Herramientas();
             nuevaherramienta.CodigoHerramienta = int.Parse(txtCH.Text);
-            nuevaherramienta.NombreH = txtNombre.Text;
-            nuevaherramienta.MarcaH = txtMarca.Text;
-            nuevaherramienta.Medida = txtMedida.Text;
-            nuevaherramienta.DescripciónH = txtDescripcion.Text;
+            nuevaherramienta.Nombreh = txtNombre.Text;
+            nuevaherramienta.Marcah = txtMarca.Text;
+            nuevaherramienta.Medidah = txtMedida.Text;
+            nuevaherramienta.Descripcionh = txtDescripcion.Text;
 
             var validar = _herramientaslogica.ValidarHerramienta(nuevaherramienta);
             if (validar.Item1)
@@ -79,19 +79,19 @@ namespace Presentacion.Ferreteria
                 _herramientaslogica.EliminarHerramienta(codigoherramientas);
             }
         }
-        private void ModificarProducto()
+        private void ModificarHerramienta()
         {
             Herramientas nuevaherramienta = new Herramientas();
             nuevaherramienta.CodigoHerramienta = int.Parse(txtCH.Text);
-            nuevaherramienta.NombreH = txtNombre.Text;
-            nuevaherramienta.MarcaH = txtMarca.Text;
-            nuevaherramienta.Medida = txtMedida.Text;
-            nuevaherramienta.DescripciónH = txtDescripcion.Text;
+            nuevaherramienta.Nombreh = txtNombre.Text;
+            nuevaherramienta.Medidah = txtMedida.Text;
+            nuevaherramienta.Marcah = txtMarca.Text;
+            nuevaherramienta.Descripcionh = txtDescripcion.Text;
 
             var validar = _herramientaslogica.ValidarHerramienta(nuevaherramienta);
             if (validar.Item1)
             {
-                _herramientaslogica.ActualizarProducto(nuevaherramienta);
+                _herramientaslogica.ActualizarHerramienta(nuevaherramienta);
                 LlenarHerramienta();
                 LimpiarTextBox();
                 ControlarBotones(true, false, false, true, true);
@@ -101,63 +101,10 @@ namespace Presentacion.Ferreteria
             else
                 MessageBox.Show(validar.Item2, "Error de Campos", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
-        private void BuscarHerramientas(int valor)
+        private void Buscar(string valor)
         {
             DtgHerramientas.DataSource = _herramientaslogica.BuscarHerramienta(valor);
         }
-
-        private void btnNuevo_Click(object sender, EventArgs e)
-        {
-            ControlarBotones(false, true, true, false, false);
-            ControlCuadros(true);
-            txtCH.Focus();
-            banderaGuardar = "Guardar";
-        }
-
-        private void btnGuardar_Click(object sender, EventArgs e)
-        {
-            if (banderaGuardar.Equals("Guardar"))
-            {
-                GuardarProducto();
-            }
-            else if (banderaGuardar.Equals("Modificar"))
-            {
-                ModificarProducto();
-            }
-        }
-        private void DtgHerramientas_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
-        {
-            ControlarBotones(false, true, true, false, false);
-            ControlCuadros(true);
-            txtCH.Focus();
-            txtCH.Text = DtgHerramientas.CurrentRow.Cells["CodigoHerramienta"].Value.ToString();
-            txtNombre.Text = DtgHerramientas.CurrentRow.Cells["nombre"].Value.ToString();
-            txtMedida.Text = DtgHerramientas.CurrentRow.Cells["medida"].Value.ToString();
-            txtMarca.Text = DtgHerramientas.CurrentRow.Cells["marca"].Value.ToString();
-            txtDescripcion.Text = DtgHerramientas.CurrentRow.Cells["descripción"].Value.ToString();
-            banderaGuardar = "Modificar";
-        }
-
-        private void btnNuevo_Click_1(object sender, EventArgs e)
-        {
-            ControlarBotones(false, true, true, false, false);
-            ControlCuadros(true);
-            txtCH.Focus();
-            banderaGuardar = "Guardar";
-        }
-
-        private void btnGuardar_Click_1(object sender, EventArgs e)
-        {
-            if (banderaGuardar.Equals("Guardar"))
-            {
-                GuardarProducto();
-            }
-            else if (banderaGuardar.Equals("Modificar"))
-            {
-                ModificarProducto();
-            }
-        }
-
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             ControlarBotones(true, false, false, true, true);
@@ -183,16 +130,42 @@ namespace Presentacion.Ferreteria
             LlenarHerramienta();
         }
 
-        private void DtgHerramientas_CellMouseDoubleClick_1(object sender, DataGridViewCellMouseEventArgs e)
+        private void txtBuscar_TextChanged(object sender, EventArgs e)
+        {
+            Buscar(txtBuscar.Text);
+        }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            if (banderaGuardar.Equals("Guardar"))
+            {
+                GuardarHerramienta();
+            }
+            else if (banderaGuardar.Equals("Modificar"))
+            {
+                ModificarHerramienta();
+            }
+        }
+
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            ControlarBotones(false, true, true, false, false);
+            ControlCuadros(true);
+            txtCH.Focus();
+            banderaGuardar = "Guardar";
+        }
+
+        private void DtgHerramientas_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             ControlarBotones(false, true, true, false, false);
             ControlCuadros(true);
             txtCH.Focus();
             txtCH.Text = DtgHerramientas.CurrentRow.Cells["CodigoHerramienta"].Value.ToString();
-            txtNombre.Text = DtgHerramientas.CurrentRow.Cells["nombre"].Value.ToString();
-            txtMedida.Text = DtgHerramientas.CurrentRow.Cells["medida"].Value.ToString();
-            txtMarca.Text = DtgHerramientas.CurrentRow.Cells["marca"].Value.ToString();
-            txtDescripcion.Text = DtgHerramientas.CurrentRow.Cells["descripción"].Value.ToString();
+            codigoherramientas = int.Parse(DtgHerramientas.CurrentRow.Cells["CodigoHerramienta"].Value.ToString());
+            txtNombre.Text = DtgHerramientas.CurrentRow.Cells["nombreh"].Value.ToString();
+            txtMedida.Text = DtgHerramientas.CurrentRow.Cells["medidah"].Value.ToString();
+            txtMarca.Text = DtgHerramientas.CurrentRow.Cells["marcah"].Value.ToString();
+            txtDescripcion.Text = DtgHerramientas.CurrentRow.Cells["descripcionh"].Value.ToString();
             banderaGuardar = "Modificar";
         }
     }

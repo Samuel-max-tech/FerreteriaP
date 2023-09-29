@@ -39,9 +39,9 @@ namespace Presentacion.Ferreteria
         private void ControlCuadros(Boolean estado)
         {
             txtCB.Enabled = estado;
-            txtNombre.Enabled = estado;
-            txtDescripcion.Enabled = estado;
-            txtMarca.Enabled = estado;
+            txtNombrep.Enabled = estado;
+            txtDescripcionp.Enabled = estado;
+            txtMarcap.Enabled = estado;
         }
         private void LlenarProducto()
         {
@@ -50,17 +50,17 @@ namespace Presentacion.Ferreteria
         private void LimpiarTextBox()
         {
             txtCB.Text = "";
-            txtNombre.Text = "";
-            txtDescripcion.Text = "";
-            txtMarca.Text = "";
+            txtNombrep.Text = "";
+            txtDescripcionp.Text = "";
+            txtMarcap.Text = "";
         }
         private void GuardarProducto()
         {
             Productos nuevoproducto = new Productos();
             nuevoproducto.CodigoBarras=int.Parse(txtCB.Text);
-            nuevoproducto.Nombrep = txtNombre.Text;
-            nuevoproducto.Descripción = txtDescripcion.Text;
-            nuevoproducto.Marca = txtMarca.Text;
+            nuevoproducto.Nombrep = txtNombrep.Text;
+            nuevoproducto.Descripcionp = txtDescripcionp.Text;
+            nuevoproducto.Marcap = txtMarcap.Text;
             var validar = _productoslogica.ValidarProducto(nuevoproducto);
             if (validar.Item1)
             {
@@ -85,9 +85,9 @@ namespace Presentacion.Ferreteria
         {
             Productos nuevoproducto = new Productos();
             nuevoproducto.CodigoBarras = int.Parse(txtCB.Text);
-            nuevoproducto.Nombrep = txtNombre.Text;
-            nuevoproducto.Descripción = txtDescripcion.Text;
-            nuevoproducto.Marca = txtMarca.Text;
+            nuevoproducto.Nombrep = txtNombrep.Text;
+            nuevoproducto.Descripcionp = txtDescripcionp.Text;
+            nuevoproducto.Marcap = txtMarcap.Text;
 
             var validar = _productoslogica.ValidarProducto(nuevoproducto);
             if (validar.Item1)
@@ -157,29 +157,16 @@ namespace Presentacion.Ferreteria
             LlenarProducto();
         }
 
-        private void DtgProductos_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            ControlarBotones(false, true, true, false, false);
-            ControlCuadros(true);
-            txtCB.Focus();
-            txtCB.Text = DtgProductos.CurrentRow.Cells["CodigoBarras"].Value.ToString();
-            txtNombre.Text = DtgProductos.CurrentRow.Cells["nombre"].Value.ToString();
-            txtDescripcion.Text = DtgProductos.CurrentRow.Cells["Descripcion"].ToString();
-            txtMarca.Text = DtgProductos.CurrentRow.Cells["Marca"].ToString();
-
-            banderaGuardar = "Modificar";
-        }
-
         private void DtgProductos_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             ControlarBotones(false, true, true, false, false);
             ControlCuadros(true);
             txtCB.Focus();
             txtCB.Text = DtgProductos.CurrentRow.Cells["CodigoBarras"].Value.ToString();
-            txtNombre.Text = DtgProductos.CurrentRow.Cells["nombre"].Value.ToString();
-            txtDescripcion.Text = DtgProductos.CurrentRow.Cells["descripción"].Value.ToString();
-            txtMarca.Text = DtgProductos.CurrentRow.Cells["marca"].Value.ToString();
-            //codigobarras = DtgProductos.CurrentRow.Cells["CodigoBarras"].Value.ToString();
+            txtNombrep.Text = DtgProductos.CurrentRow.Cells["nombrep"].Value.ToString();
+            txtDescripcionp.Text = DtgProductos.CurrentRow.Cells["descripcionp"].Value.ToString();
+            txtMarcap.Text = DtgProductos.CurrentRow.Cells["marcap"].Value.ToString();
+            codigobarras = DtgProductos.CurrentRow.Cells["CodigoBarras"].Value.ToString();
             banderaGuardar = "Modificar";
         }
     }

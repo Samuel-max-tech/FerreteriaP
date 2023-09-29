@@ -20,16 +20,19 @@ fkidusuario INT PRIMARY KEY,FOREIGN KEY(fkidusuario) REFERENCES usuarios(idusuar
 
 CREATE TABLE productos(
 CodigoBarras INT PRIMARY KEY NOT NULL,
-nombre VARCHAR(50),
-descripción VARCHAR(50),
-marca VARCHAR(50));
+nombrep VARCHAR(50),
+descripcionp VARCHAR(50),
+marcap VARCHAR(50));
+
+DROP TABLE productos;
+DROP TABLE herramientas;
 
 CREATE TABLE herramientas(
 CodigoHerramienta INT PRIMARY KEY NOT NULL,
-nombre VARCHAR(50), 
-medida VARCHAR(50), 
-marca VARCHAR(50), 
-descripción VARCHAR(50));
+nombreh VARCHAR(50), 
+medidah VARCHAR(50), 
+marcah VARCHAR(50), 
+descripcionh VARCHAR(50));
 
 INSERT INTO Administradores VALUES(NULL,'luis',SHA1('12345'));
 
@@ -50,4 +53,4 @@ END;
 //
 
 
-Select idusuario,nombre,apellidop,apellidom,fechanacimiento,rfc from usuarios;
+Select idusuario,nombre,apellidop,apellidom,fechanacimiento,rfc from usuarios;productos

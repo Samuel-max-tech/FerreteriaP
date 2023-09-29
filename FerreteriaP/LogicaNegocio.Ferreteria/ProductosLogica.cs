@@ -51,7 +51,7 @@ namespace LogicaNegocio.Ferreteria
                 valida = false;
             }
 
-            if (nuevoproducto.Marca == "")
+            if (nuevoproducto.Marcap == "")
             {
                 mensaje = mensaje + "El Campo Marca es Reqerido \n";
                 valida = false;

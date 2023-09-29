@@ -33,10 +33,10 @@
             this.DtgProductos = new System.Windows.Forms.DataGridView();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtMarca = new System.Windows.Forms.TextBox();
+            this.txtMarcap = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtNombre = new System.Windows.Forms.TextBox();
-            this.txtDescripcion = new System.Windows.Forms.TextBox();
+            this.txtNombrep = new System.Windows.Forms.TextBox();
+            this.txtDescripcionp = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtCB = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -97,13 +97,13 @@
             this.label4.Text = "Marca";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // txtMarca
+            // txtMarcap
             // 
-            this.txtMarca.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtMarca.Location = new System.Drawing.Point(321, 188);
-            this.txtMarca.Name = "txtMarca";
-            this.txtMarca.Size = new System.Drawing.Size(356, 33);
-            this.txtMarca.TabIndex = 4;
+            this.txtMarcap.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtMarcap.Location = new System.Drawing.Point(321, 188);
+            this.txtMarcap.Name = "txtMarcap";
+            this.txtMarcap.Size = new System.Drawing.Size(356, 33);
+            this.txtMarcap.TabIndex = 4;
             // 
             // label2
             // 
@@ -115,21 +115,21 @@
             this.label2.Text = "Descripción";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // txtNombre
+            // txtNombrep
             // 
-            this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtNombre.Location = new System.Drawing.Point(12, 114);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(250, 33);
-            this.txtNombre.TabIndex = 2;
+            this.txtNombrep.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtNombrep.Location = new System.Drawing.Point(12, 114);
+            this.txtNombrep.Name = "txtNombrep";
+            this.txtNombrep.Size = new System.Drawing.Size(250, 33);
+            this.txtNombrep.TabIndex = 2;
             // 
-            // txtDescripcion
+            // txtDescripcionp
             // 
-            this.txtDescripcion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtDescripcion.Location = new System.Drawing.Point(14, 188);
-            this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(250, 33);
-            this.txtDescripcion.TabIndex = 3;
+            this.txtDescripcionp.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtDescripcionp.Location = new System.Drawing.Point(14, 188);
+            this.txtDescripcionp.Name = "txtDescripcionp";
+            this.txtDescripcionp.Size = new System.Drawing.Size(250, 33);
+            this.txtDescripcionp.TabIndex = 3;
             // 
             // label3
             // 
@@ -250,10 +250,10 @@
             this.Controls.Add(this.DtgProductos);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.txtMarca);
+            this.Controls.Add(this.txtMarcap);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtNombre);
-            this.Controls.Add(this.txtDescripcion);
+            this.Controls.Add(this.txtNombrep);
+            this.Controls.Add(this.txtDescripcionp);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtCB);
             this.Controls.Add(this.label1);
@@ -280,10 +280,10 @@
         private System.Windows.Forms.DataGridView DtgProductos;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtMarca;
+        private System.Windows.Forms.TextBox txtMarcap;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtNombre;
-        private System.Windows.Forms.TextBox txtDescripcion;
+        private System.Windows.Forms.TextBox txtNombrep;
+        private System.Windows.Forms.TextBox txtDescripcionp;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtCB;
         private System.Windows.Forms.Label label1;

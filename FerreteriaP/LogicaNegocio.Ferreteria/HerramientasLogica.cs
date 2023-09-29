@@ -19,7 +19,7 @@ namespace LogicaNegocio.Ferreteria
         {
             return _herramientasaccesodatos.ObtenerHerramienta();
         }
-        public List<Herramientas> BuscarHerramienta(int valor)
+        public List<Herramientas> BuscarHerramienta(string valor)
         {
             return _herramientasaccesodatos.BuscarHerramienta(valor);
         }
@@ -27,7 +27,7 @@ namespace LogicaNegocio.Ferreteria
         {
             _herramientasaccesodatos.GuardarHerramienta(nuevaherramienta);
         }
-        public void ActualizarProducto(Herramientas herramienta)
+        public void ActualizarHerramienta(Herramientas herramienta)
         {
             _herramientasaccesodatos.ActualizarHerramienta(herramienta);
         }
@@ -45,19 +45,19 @@ namespace LogicaNegocio.Ferreteria
                 valida = false;
             }
 
-            if (nuevaherramienta.NombreH == "")
+            if (nuevaherramienta.Nombreh == "")
             {
                 mensaje = mensaje + "El Campo Nombre es Reqerido \n";
                 valida = false;
             }
 
-            if (nuevaherramienta.Medida == "")
+            if (nuevaherramienta.Medidah == "")
             {
                 mensaje = mensaje + "El Campo Medida es Reqerido \n";
                 valida = false;
             }
 
-            if (nuevaherramienta.MarcaH == "")
+            if (nuevaherramienta.Marcah == "")
             {
                 mensaje = mensaje + "El Campo Marca es Reqerido \n";
                 valida = false;
