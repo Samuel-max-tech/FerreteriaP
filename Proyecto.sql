@@ -52,5 +52,7 @@ END if;
 END;
 //
 
+CALL P_Validar(Admin)
+
 
 Select idusuario,nombre,apellidop,apellidom,fechanacimiento,rfc from usuarios;productos
