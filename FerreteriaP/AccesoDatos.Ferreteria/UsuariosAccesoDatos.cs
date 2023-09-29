@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Entidades;
+using System.Security.Cryptography;
 
 namespace AccesoDatos.Ferreteria
 {
@@ -39,7 +40,7 @@ namespace AccesoDatos.Ferreteria
         }
         public void GuardarUsuario(Usuarios nuevousuario)
         {
-            string Consulta = string.Format("Insert Into usuarios values(null,'{0}','{1}','{2}','{3}','{4}','{5}','{6}');",
+            string Consulta = string.Format("Insert Into usuarios values(null,'{0}','{1}','{2}','{3}','{4}','{5}',Sha1('{6}'));",
             nuevousuario.Nombre,nuevousuario.Apellidop,nuevousuario.Apellidom,
             nuevousuario.Fechanacimiento,nuevousuario.Rfc,nuevousuario.Usuario,nuevousuario.Contrasena);
             conexion.EjecutarConsulta(Consulta);
@@ -79,5 +80,32 @@ namespace AccesoDatos.Ferreteria
             conexion.EjecutarConsulta(consulta);
         }
 
+        public bool ValidarUsuario(string usuario, string contrasena)
+        {
+            string hashedPassword = Sha1(contrasena);
+            string consulta = $"SELECT * FROM usuarios WHERE usuario = '{usuario}' AND contrasena = '{hashedPassword}'";
+            DataTable dt = conexion.ObtenerDatos(consulta);
+
+            if (dt.Rows.Count > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        public static string Sha1(string texto)
+        {
+            SHA1 sha1 = SHA1CryptoServiceProvider.Create();
+            Byte[] textOriginal = Encoding.Default.GetBytes(texto);
+            Byte[] hash = sha1.ComputeHash(textOriginal);
+            StringBuilder cadena = new StringBuilder();
+            foreach (byte i in hash)
+            {
+                cadena.AppendFormat("{0:x2}", i);
+            }
+            return cadena.ToString();
+        }
     }
 }

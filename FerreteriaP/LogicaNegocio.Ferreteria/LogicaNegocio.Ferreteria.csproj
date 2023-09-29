@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="HerramientasLogica.cs" />
+    <Compile Include="LogLogica.cs" />
     <Compile Include="ProductosLogica.cs" />
     <Compile Include="UsuariosLogica.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

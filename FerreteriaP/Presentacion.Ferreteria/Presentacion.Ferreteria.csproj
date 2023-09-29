@@ -64,6 +64,12 @@
     <Compile Include="FrmAgregarUsuarios.Designer.cs">
       <DependentUpon>FrmAgregarUsuarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLog.Designer.cs">
+      <DependentUpon>FrmLog.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmPricipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +86,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmAgregarUsuarios.resx">
       <DependentUpon>FrmAgregarUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLog.resx">
+      <DependentUpon>FrmLog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPricipal.resx">
       <DependentUpon>FrmPricipal.cs</DependentUpon>
@@ -155,6 +164,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-gambler-101.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Business-Card-Brackets.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cerrar.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
