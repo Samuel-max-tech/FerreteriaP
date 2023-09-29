@@ -35,6 +35,7 @@
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.lblAddUser = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnCerrar
@@ -75,7 +76,7 @@
             this.btnIniciar.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIniciar.ForeColor = System.Drawing.Color.White;
             this.btnIniciar.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnIniciar.Location = new System.Drawing.Point(291, 284);
+            this.btnIniciar.Location = new System.Drawing.Point(295, 284);
             this.btnIniciar.Name = "btnIniciar";
             this.btnIniciar.Size = new System.Drawing.Size(131, 33);
             this.btnIniciar.TabIndex = 3;
@@ -85,17 +86,17 @@
             // 
             // txtContrasena
             // 
-            this.txtContrasena.Location = new System.Drawing.Point(123, 204);
+            this.txtContrasena.Location = new System.Drawing.Point(62, 208);
             this.txtContrasena.Name = "txtContrasena";
             this.txtContrasena.PasswordChar = '*';
-            this.txtContrasena.Size = new System.Drawing.Size(299, 33);
+            this.txtContrasena.Size = new System.Drawing.Size(364, 33);
             this.txtContrasena.TabIndex = 2;
             // 
             // txtUsuario
             // 
-            this.txtUsuario.Location = new System.Drawing.Point(123, 119);
+            this.txtUsuario.Location = new System.Drawing.Point(62, 123);
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(299, 33);
+            this.txtUsuario.Size = new System.Drawing.Size(364, 33);
             this.txtUsuario.TabIndex = 1;
             // 
             // label2
@@ -104,7 +105,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label2.Location = new System.Drawing.Point(117, 170);
+            this.label2.Location = new System.Drawing.Point(56, 174);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(117, 25);
             this.label2.TabIndex = 18;
@@ -116,11 +117,24 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label1.Location = new System.Drawing.Point(117, 85);
+            this.label1.Location = new System.Drawing.Point(56, 89);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(82, 25);
             this.label1.TabIndex = 17;
             this.label1.Text = "Usuario";
+            // 
+            // lblAddUser
+            // 
+            this.lblAddUser.AutoSize = true;
+            this.lblAddUser.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblAddUser.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Underline);
+            this.lblAddUser.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.lblAddUser.Location = new System.Drawing.Point(58, 290);
+            this.lblAddUser.Name = "lblAddUser";
+            this.lblAddUser.Size = new System.Drawing.Size(134, 21);
+            this.lblAddUser.TabIndex = 20;
+            this.lblAddUser.Text = "Agregar Usuario";
+            this.lblAddUser.Click += new System.EventHandler(this.lblAddUser_Click);
             // 
             // FrmLog
             // 
@@ -130,6 +144,7 @@
             this.BackgroundImage = global::Presentacion.Ferreteria.Properties.Resources.Business_Card_Brackets;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(518, 394);
+            this.Controls.Add(this.lblAddUser);
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnIniciar);
@@ -139,6 +154,7 @@
             this.Controls.Add(this.label1);
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "FrmLog";
             this.Text = "FrmLog";
@@ -156,5 +172,6 @@
         private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblAddUser;
     }
 }

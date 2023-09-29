@@ -36,5 +36,11 @@ namespace Presentacion.Ferreteria
             else
                 MessageBox.Show("Error de credenciales");
         }
+
+        private void lblAddUser_Click(object sender, EventArgs e)
+        {
+            FrmAgregarUsuarios fa = new FrmAgregarUsuarios();
+            fa.ShowDialog();
+        }
     }
 }

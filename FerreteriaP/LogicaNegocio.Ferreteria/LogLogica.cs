@@ -9,10 +9,10 @@ namespace LogicaNegocio.Ferreteria
 {
     public class LogLogica
     {
-        UsuariosAccesoDatos adl;
-        public bool ValidarAcceso(string usuario, string clave)
+        UsuariosAccesoDatos adl = new UsuariosAccesoDatos();
+        public bool ValidarAcceso(string usuario, string contrasena)
         {
-            if (adl.ValidarUsuario(usuario, clave))
+            if (adl.ValidarUsuario(usuario, contrasena))
                 return true;
             else
                 return false;
