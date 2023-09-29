@@ -23,7 +23,7 @@ CodigoBarras INT PRIMARY KEY NOT NULL,
 nombre VARCHAR(50),
 descripción VARCHAR(50),
 marca VARCHAR(50));
-DROP TABLE productos;
+
 CREATE TABLE herramientas(
 CodigoHerramienta INT PRIMARY KEY NOT NULL,
 nombre VARCHAR(50), 
@@ -36,7 +36,8 @@ INSERT INTO Administradores VALUES(NULL,'luis',SHA1('12345'));
 delimiter //
 CREATE PROCEDURE P_Validar(
 IN _usuario VARCHAR(100),
-IN _contrasena VARCHAR(255))
+IN _contrasena VARCHAR(255)
+)
 BEGIN
 DECLARE x INT;
 SELECT COUNT(*) FROM usuarios WHERE usuario=_usuario AND contrasena=_contrasena INTO X;
