@@ -1,7 +1,8 @@
-﻿using Entidades; // Asegúrate de que esta referencia esté presente
-using AccesoDatos.Ferreteria; // Asegúrate de que esta referencia esté presente
+﻿using Entidades; 
+using AccesoDatos.Ferreteria; 
 using System;
 using System.Collections.Generic;
+using System.Data;
 
 namespace LogicaNegocio.Ferreteria
 {
@@ -14,29 +15,19 @@ namespace LogicaNegocio.Ferreteria
             permisosAccesoDatos = new PermisosAccesoDatos();
         }
 
-        public List<Permisos> ObtenerPermisos()
+        public DataTable ObtenerUsuariosConPermisos()
         {
-            return permisosAccesoDatos.ObtenerPermisos();
+            return permisosAccesoDatos.ObtenerUsuarios();
         }
 
-        public void GuardarPermisos(Permisos nuevoPermiso)
+        public void GuardarPermisos(Permisos permisos)
         {
-            permisosAccesoDatos.GuardarPermisos(nuevoPermiso);
+            permisosAccesoDatos.GuardarPermisos(permisos);
         }
 
-        public List<Permisos> BuscarPermisos(string valor)
+        public void ActualizarPermisos(Permisos permisos)
         {
-            return permisosAccesoDatos.BuscarPermisos(valor);
-        }
-
-        public void ActualizarUsuarios(Permisos NuevoPermiso)
-        {
-            permisosAccesoDatos.ActualizarUsuarios(NuevoPermiso);
-        }
-
-        public void EliminarPermisos(int Fkidusuario)
-        {
-            permisosAccesoDatos.EliminarPermisos(Fkidusuario);
+            permisosAccesoDatos.ActualizarPermisos(permisos);
         }
     }
 }

@@ -33,7 +33,7 @@
             this.cbxagregar = new System.Windows.Forms.CheckBox();
             this.cbxeditar = new System.Windows.Forms.CheckBox();
             this.cbxeliminar = new System.Windows.Forms.CheckBox();
-            this.cbxVisualizar = new System.Windows.Forms.CheckBox();
+            this.cbxvisualizar = new System.Windows.Forms.CheckBox();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.cmbUsuarios = new System.Windows.Forms.ComboBox();
@@ -65,17 +65,17 @@
             this.cbxacceso.Location = new System.Drawing.Point(90, 77);
             this.cbxacceso.Name = "cbxacceso";
             this.cbxacceso.Size = new System.Drawing.Size(136, 40);
-            this.cbxacceso.TabIndex = 6;
+            this.cbxacceso.TabIndex = 1;
             this.cbxacceso.Text = "Acceso";
             this.cbxacceso.UseVisualStyleBackColor = true;
             // 
             // cbxagregar
             // 
             this.cbxagregar.AutoSize = true;
-            this.cbxagregar.Location = new System.Drawing.Point(90, 146);
+            this.cbxagregar.Location = new System.Drawing.Point(90, 139);
             this.cbxagregar.Name = "cbxagregar";
             this.cbxagregar.Size = new System.Drawing.Size(150, 40);
-            this.cbxagregar.TabIndex = 7;
+            this.cbxagregar.TabIndex = 2;
             this.cbxagregar.Text = "Agregar";
             this.cbxagregar.UseVisualStyleBackColor = true;
             // 
@@ -85,7 +85,7 @@
             this.cbxeditar.Location = new System.Drawing.Point(90, 207);
             this.cbxeditar.Name = "cbxeditar";
             this.cbxeditar.Size = new System.Drawing.Size(117, 40);
-            this.cbxeditar.TabIndex = 8;
+            this.cbxeditar.TabIndex = 3;
             this.cbxeditar.Text = "Editar";
             this.cbxeditar.UseVisualStyleBackColor = true;
             // 
@@ -95,19 +95,19 @@
             this.cbxeliminar.Location = new System.Drawing.Point(90, 274);
             this.cbxeliminar.Name = "cbxeliminar";
             this.cbxeliminar.Size = new System.Drawing.Size(146, 40);
-            this.cbxeliminar.TabIndex = 9;
+            this.cbxeliminar.TabIndex = 4;
             this.cbxeliminar.Text = "Eliminar";
             this.cbxeliminar.UseVisualStyleBackColor = true;
             // 
-            // cbxVisualizar
+            // cbxvisualizar
             // 
-            this.cbxVisualizar.AutoSize = true;
-            this.cbxVisualizar.Location = new System.Drawing.Point(90, 334);
-            this.cbxVisualizar.Name = "cbxVisualizar";
-            this.cbxVisualizar.Size = new System.Drawing.Size(146, 40);
-            this.cbxVisualizar.TabIndex = 11;
-            this.cbxVisualizar.Text = "Eliminar";
-            this.cbxVisualizar.UseVisualStyleBackColor = true;
+            this.cbxvisualizar.AutoSize = true;
+            this.cbxvisualizar.Location = new System.Drawing.Point(90, 334);
+            this.cbxvisualizar.Name = "cbxvisualizar";
+            this.cbxvisualizar.Size = new System.Drawing.Size(166, 40);
+            this.cbxvisualizar.TabIndex = 5;
+            this.cbxvisualizar.Text = "Visualizar";
+            this.cbxvisualizar.UseVisualStyleBackColor = true;
             // 
             // btnGuardar
             // 
@@ -118,10 +118,11 @@
             this.btnGuardar.Location = new System.Drawing.Point(349, 418);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(171, 40);
-            this.btnGuardar.TabIndex = 48;
+            this.btnGuardar.TabIndex = 7;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // btnCancelar
             // 
@@ -132,18 +133,20 @@
             this.btnCancelar.Location = new System.Drawing.Point(538, 418);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(171, 40);
-            this.btnCancelar.TabIndex = 49;
+            this.btnCancelar.TabIndex = 8;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // cmbUsuarios
             // 
-            this.cmbUsuarios.FormattingEnabled = true;
+            this.cmbUsuarios.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cmbUsuarios.Location = new System.Drawing.Point(90, 414);
             this.cmbUsuarios.Name = "cmbUsuarios";
             this.cmbUsuarios.Size = new System.Drawing.Size(222, 44);
-            this.cmbUsuarios.TabIndex = 50;
+            this.cmbUsuarios.TabIndex = 6;
             // 
             // FrmAgregarPermisos
             // 
@@ -157,7 +160,7 @@
             this.Controls.Add(this.cmbUsuarios);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnGuardar);
-            this.Controls.Add(this.cbxVisualizar);
+            this.Controls.Add(this.cbxvisualizar);
             this.Controls.Add(this.cbxeliminar);
             this.Controls.Add(this.cbxeditar);
             this.Controls.Add(this.cbxagregar);
@@ -169,6 +172,7 @@
             this.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.Name = "FrmAgregarPermisos";
             this.Text = "FrmAgregarPermisos";
+            this.Load += new System.EventHandler(this.FrmAgregarPermisos_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -181,7 +185,7 @@
         private System.Windows.Forms.CheckBox cbxagregar;
         private System.Windows.Forms.CheckBox cbxeditar;
         private System.Windows.Forms.CheckBox cbxeliminar;
-        private System.Windows.Forms.CheckBox cbxVisualizar;
+        private System.Windows.Forms.CheckBox cbxvisualizar;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.ComboBox cmbUsuarios;

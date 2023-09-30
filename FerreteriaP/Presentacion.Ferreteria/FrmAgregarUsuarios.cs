@@ -18,7 +18,6 @@ namespace Presentacion.Ferreteria
         private UsuariosLogica _usuarioslogica;
         private string banderaGuardar = " ";
         private int idusuarios = 0;
-        private string contrasenaoriginal = "";
         public FrmAgregarUsuarios()
         {
             InitializeComponent();
@@ -161,6 +160,8 @@ namespace Presentacion.Ferreteria
             ControlarBotones(false, true, true, false, false);
             ControlCuadros(true);
             txtNombre.Focus();
+            txtusuario.Enabled = false;
+            txtContrasena.Enabled = false;
             txtNombre.Text = DtgUsuarios.CurrentRow.Cells["nombre"].Value.ToString();
             txtApellidoP.Text = DtgUsuarios.CurrentRow.Cells["apellidop"].Value.ToString();
             txtApellidoM.Text = DtgUsuarios.CurrentRow.Cells["apellidom"].Value.ToString();
