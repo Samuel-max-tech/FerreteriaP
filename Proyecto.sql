@@ -54,5 +54,4 @@ END;
 
 CALL P_Validar(Admin)
 
-
 SELECT usuario,contrasena FROM usuarios WHERE usuario = 'Samuel' AND contrasena = SHA1('1010');
