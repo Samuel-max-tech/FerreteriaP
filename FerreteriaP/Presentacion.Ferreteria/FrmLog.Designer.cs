@@ -78,7 +78,7 @@
             this.btnIniciar.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.btnIniciar.Location = new System.Drawing.Point(295, 284);
             this.btnIniciar.Name = "btnIniciar";
-            this.btnIniciar.Size = new System.Drawing.Size(131, 33);
+            this.btnIniciar.Size = new System.Drawing.Size(131, 50);
             this.btnIniciar.TabIndex = 3;
             this.btnIniciar.Text = "Iniciar";
             this.btnIniciar.UseVisualStyleBackColor = false;
@@ -129,7 +129,7 @@
             this.lblAddUser.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblAddUser.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Underline);
             this.lblAddUser.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lblAddUser.Location = new System.Drawing.Point(58, 290);
+            this.lblAddUser.Location = new System.Drawing.Point(56, 303);
             this.lblAddUser.Name = "lblAddUser";
             this.lblAddUser.Size = new System.Drawing.Size(200, 31);
             this.lblAddUser.TabIndex = 20;
