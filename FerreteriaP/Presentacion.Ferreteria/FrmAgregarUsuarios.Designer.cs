@@ -181,6 +181,7 @@
             this.DtgUsuarios.RowHeadersWidth = 62;
             this.DtgUsuarios.Size = new System.Drawing.Size(840, 231);
             this.DtgUsuarios.TabIndex = 44;
+            this.DtgUsuarios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DtgUsuarios_CellContentClick);
             this.DtgUsuarios.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DtgUsuarios_CellDoubleClick);
             // 
             // btnCerrar
@@ -261,11 +262,11 @@
             // label8
             // 
             this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(423, 160);
+            this.label8.Location = new System.Drawing.Point(430, 160);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(248, 30);
             this.label8.TabIndex = 54;
-            this.label8.Text = "Clave";
+            this.label8.Text = "Contraseña";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // txtusuario

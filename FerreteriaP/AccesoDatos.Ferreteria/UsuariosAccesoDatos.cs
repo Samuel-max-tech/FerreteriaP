@@ -75,7 +75,7 @@ namespace AccesoDatos.Ferreteria
         }
         public void ActualizarUsuarios(Usuarios NuevoUsuario)
         {
-            string consulta = string.Format("update usuarios set nombre='{0}',apellidop='{1}',apellidom='{2}',fechanacimiento='{3}',rfc='{4}',usuario='{5}',contrasena='{6}' where idusuario={7} ",
+            string consulta = string.Format("update usuarios set nombre='{0}',apellidop='{1}',apellidom='{2}',fechanacimiento='{3}',rfc='{4}',usuario='{5}',contrasena=sha1('{6}') where idusuario={7} ",
             NuevoUsuario.Nombre,NuevoUsuario.Apellidop,NuevoUsuario.Apellidom,NuevoUsuario.Fechanacimiento,NuevoUsuario.Rfc,NuevoUsuario.Usuario,NuevoUsuario.Contrasena,NuevoUsuario.IdUsuario);
             conexion.EjecutarConsulta(consulta);
         }

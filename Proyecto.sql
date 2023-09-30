@@ -55,4 +55,4 @@ END;
 CALL P_Validar(Admin)
 
 
-Select idusuario,nombre,apellidop,apellidom,fechanacimiento,rfc from usuarios;productos
+SELECT usuario,contrasena FROM usuarios WHERE usuario = 'Samuel' AND contrasena = SHA1('1010');

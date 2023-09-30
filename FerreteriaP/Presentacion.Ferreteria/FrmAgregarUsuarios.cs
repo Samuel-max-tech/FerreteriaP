@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -17,6 +18,7 @@ namespace Presentacion.Ferreteria
         private UsuariosLogica _usuarioslogica;
         private string banderaGuardar = " ";
         private int idusuarios = 0;
+        private string contrasenaoriginal = "";
         public FrmAgregarUsuarios()
         {
             InitializeComponent();
@@ -177,6 +179,27 @@ namespace Presentacion.Ferreteria
         private void Buscar(string valor)
         {
             DtgUsuarios.DataSource = _usuarioslogica.BuscarUsuario(valor);
+        }
+
+        private void DtgUsuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            ControlarBotones(false, true, true, false, false);
+            ControlCuadros(true);
+            txtNombre.Focus();
+            txtNombre.Text = DtgUsuarios.CurrentRow.Cells["nombre"].Value.ToString();
+            txtApellidoP.Text = DtgUsuarios.CurrentRow.Cells["apellidop"].Value.ToString();
+            txtApellidoM.Text = DtgUsuarios.CurrentRow.Cells["apellidom"].Value.ToString();
+            txtFenac.Text = DtgUsuarios.CurrentRow.Cells["fechanacimiento"].Value.ToString();
+            txtrfc.Text = DtgUsuarios.CurrentRow.Cells["rfc"].Value.ToString();
+            txtNombre.Enabled = false;
+            txtApellidoP.Enabled= false;
+            txtApellidoM.Enabled= false;
+            txtFenac.Enabled= false;
+            txtrfc.Enabled = false;
+            txtusuario.Text = DtgUsuarios.CurrentRow.Cells["usuario"].Value.ToString();
+            txtContrasena.Text = "";
+            idusuarios = int.Parse(DtgUsuarios.CurrentRow.Cells["idusuario"].Value.ToString());
+            banderaGuardar = "Modificar";
         }
     }
 }
