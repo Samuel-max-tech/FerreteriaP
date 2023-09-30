@@ -171,6 +171,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.Name = "FrmAgregarPermisos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmAgregarPermisos";
             this.Load += new System.EventHandler(this.FrmAgregarPermisos_Load);
             this.ResumeLayout(false);

@@ -16,7 +16,7 @@ namespace Presentacion.Ferreteria
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmLog());
+            Application.Run(new FrmAgregarPermisos());
         }
     }
 }

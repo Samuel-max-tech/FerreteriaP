@@ -30,21 +30,21 @@ namespace Presentacion.Ferreteria
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             if (cmbUsuarios.SelectedItem != null)
+            { 
+            Usuarios usuario = (Usuarios)cmbUsuarios.SelectedItem;
+            Permisos permisos = new Permisos
             {
-                Usuarios usuario = (Usuarios)cmbUsuarios.SelectedItem;
-                Permisos permisos = new Permisos
-                {
-                    Acceso = cbxacceso.Checked,
-                    Agregar = cbxagregar.Checked,
-                    Editar = cbxeditar.Checked,
-                    Eliminar = cbxeliminar.Checked,
-                    Visualizar = cbxvisualizar.Checked,
-                    Fkidusuario = usuario.IdUsuario
-                };
+                Acceso = cbxacceso.Checked,
+                Agregar = cbxagregar.Checked,
+                Editar = cbxeditar.Checked,
+                Eliminar = cbxeliminar.Checked,
+                Visualizar = cbxvisualizar.Checked,
+                Fkidusuario = usuario.IdUsuario
+            };
 
-                permisosLogica.ActualizarPermisos(permisos);
+            permisosLogica.ActualizarPermisos(permisos);
 
-                MessageBox.Show("Permisos guardados correctamente.");
+            MessageBox.Show("Permisos guardados correctamente.");
             }
             else
             {
@@ -67,14 +67,11 @@ namespace Presentacion.Ferreteria
 
         private void CargarUsuarios()
         {
-            DataTable usuarios = permisosLogica.ObtenerUsuariosConPermisos();
-            foreach (DataRow row in usuarios.Rows)
+            List<string> nombresUsuarios = permisosLogica.ObtenerNombresUsuariosConPermisos();
+
+            foreach (string nombreUsuario in nombresUsuarios)
             {
-                cmbUsuarios.Items.Add(new Usuarios
-                {
-                    IdUsuario = Convert.ToInt32(row["idusuario"]),
-                    Usuario = row["usuario"].ToString(),
-                });
+                cmbUsuarios.Items.Add(nombreUsuario);
             }
         }
 

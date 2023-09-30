@@ -17,32 +17,48 @@ namespace AccesoDatos.Ferreteria
             conexion = new Conexion("localhost", "root", "", "Ferreteria", 3306);
         }
 
-        public DataTable ObtenerUsuarios()
+        public DataTable ObtenerNombresUsuarios()
         {
-            string consulta = "SELECT u.idusuario, u.usuario FROM usuarios u JOIN permisos p ON u.idusuario = p.fkidusuario";
+            string consulta = "SELECT usuario FROM usuarios";
             return conexion.ObtenerDatos(consulta);
         }
-
-        public void GuardarPermisos(Permisos permisos)
+        public List<Usuarios> ObtenerUsuariosConPermisos()
         {
-            string consulta = $"INSERT INTO permisos VALUES " +
-                $"({Convert.ToInt32(permisos.Acceso)}, {Convert.ToInt32(permisos.Agregar)}, " +
-                $"{Convert.ToInt32(permisos.Editar)}, {Convert.ToInt32(permisos.Eliminar)}, " +
-                $"{Convert.ToInt32(permisos.Visualizar)}, {permisos.Fkidusuario})";
+            List<Usuarios> usuariosConPermisos = new List<Usuarios>();
 
+            string consulta = "SELECT idusuario, nombre, apellidop, apellidom, fechanacimiento, rfc, usuario FROM usuarios";
+            DataTable dt = conexion.ObtenerDatos(consulta);
+
+            foreach (DataRow row in dt.Rows)
+            {
+                Usuarios usuario = new Usuarios
+                {
+                    IdUsuario = Convert.ToInt32(row["idusuario"]),
+                    Nombre = row["nombre"].ToString(),
+                    Apellidop = row["apellidop"].ToString(),
+                    Apellidom = row["apellidom"].ToString(),
+                    Fechanacimiento = row["fechanacimiento"].ToString(),
+                    Rfc = row["rfc"].ToString(),
+                    Usuario = row["usuario"].ToString(),
+                    // ... otras propiedades si las tienes ...
+                };
+
+                usuariosConPermisos.Add(usuario);
+            }
+
+            return usuariosConPermisos;
+        }
+        public void GuardarPermisos(Permisos nuevopermiso)
+        {
+            string consulta = string.Format("INSERT INTO permisos VALUES ({0},{1},{2},{3},{4},{5})",
+            nuevopermiso.Acceso, nuevopermiso.Agregar, nuevopermiso.Editar, nuevopermiso.Eliminar, nuevopermiso.Visualizar, nuevopermiso.Fkidusuario);
             conexion.EjecutarConsulta(consulta);
         }
 
-        public void ActualizarPermisos(Permisos permisos)
+        public void ActualizarPermisos(Permisos nuevopermiso)
         {
-            string consulta = $"UPDATE permisos SET " +
-                $"acceso = {Convert.ToInt32(permisos.Acceso)}, " +
-                $"agregar = {Convert.ToInt32(permisos.Agregar)}, " +
-                $"editar = {Convert.ToInt32(permisos.Editar)}, " +
-                $"eliminar = {Convert.ToInt32(permisos.Eliminar)}, " +
-                $"visualizar = {Convert.ToInt32(permisos.Visualizar)} " +
-                $"WHERE fkidusuario = {permisos.Fkidusuario}";
-
+            string consulta = string.Format("Update permisos set acceso = {0}, agregar = {1}, editar = {2}, eliminar = {3}, visualizar= {4} where fkidusuario = {5})",
+            nuevopermiso.Acceso, nuevopermiso.Agregar, nuevopermiso.Editar, nuevopermiso.Eliminar, nuevopermiso.Visualizar, nuevopermiso.Fkidusuario);
             conexion.EjecutarConsulta(consulta);
         }
     }
