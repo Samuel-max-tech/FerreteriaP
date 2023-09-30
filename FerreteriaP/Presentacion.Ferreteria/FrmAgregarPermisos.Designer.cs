@@ -51,12 +51,13 @@
             this.btnCerrar.ForeColor = System.Drawing.Color.Transparent;
             this.btnCerrar.Image = global::Presentacion.Ferreteria.Properties.Resources.cerrar;
             this.btnCerrar.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnCerrar.Location = new System.Drawing.Point(586, 49);
+            this.btnCerrar.Location = new System.Drawing.Point(671, 44);
             this.btnCerrar.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(56, 53);
             this.btnCerrar.TabIndex = 5;
             this.btnCerrar.UseVisualStyleBackColor = false;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // cbxacceso
             // 
