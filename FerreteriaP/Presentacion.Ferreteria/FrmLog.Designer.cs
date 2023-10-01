@@ -50,9 +50,9 @@
             this.btnCerrar.ForeColor = System.Drawing.Color.Transparent;
             this.btnCerrar.Image = global::Presentacion.Ferreteria.Properties.Resources.cerrar;
             this.btnCerrar.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnCerrar.Location = new System.Drawing.Point(435, 35);
+            this.btnCerrar.Location = new System.Drawing.Point(478, 33);
             this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(52, 53);
+            this.btnCerrar.Size = new System.Drawing.Size(28, 25);
             this.btnCerrar.TabIndex = 4;
             this.btnCerrar.UseVisualStyleBackColor = false;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
@@ -65,7 +65,7 @@
             this.label3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label3.Location = new System.Drawing.Point(30, 35);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(121, 38);
+            this.label3.Size = new System.Drawing.Size(80, 25);
             this.label3.TabIndex = 19;
             this.label3.Text = "Loggin:";
             // 
@@ -76,9 +76,9 @@
             this.btnIniciar.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIniciar.ForeColor = System.Drawing.Color.White;
             this.btnIniciar.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnIniciar.Location = new System.Drawing.Point(295, 284);
+            this.btnIniciar.Location = new System.Drawing.Point(323, 294);
             this.btnIniciar.Name = "btnIniciar";
-            this.btnIniciar.Size = new System.Drawing.Size(131, 50);
+            this.btnIniciar.Size = new System.Drawing.Size(103, 30);
             this.btnIniciar.TabIndex = 3;
             this.btnIniciar.Text = "Iniciar";
             this.btnIniciar.UseVisualStyleBackColor = false;
@@ -89,14 +89,14 @@
             this.txtContrasena.Location = new System.Drawing.Point(62, 208);
             this.txtContrasena.Name = "txtContrasena";
             this.txtContrasena.PasswordChar = '*';
-            this.txtContrasena.Size = new System.Drawing.Size(364, 45);
+            this.txtContrasena.Size = new System.Drawing.Size(364, 33);
             this.txtContrasena.TabIndex = 2;
             // 
             // txtUsuario
             // 
             this.txtUsuario.Location = new System.Drawing.Point(62, 123);
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(364, 45);
+            this.txtUsuario.Size = new System.Drawing.Size(364, 33);
             this.txtUsuario.TabIndex = 1;
             // 
             // label2
@@ -107,7 +107,7 @@
             this.label2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label2.Location = new System.Drawing.Point(56, 174);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(173, 38);
+            this.label2.Size = new System.Drawing.Size(117, 25);
             this.label2.TabIndex = 18;
             this.label2.Text = "Contraseña";
             // 
@@ -119,7 +119,7 @@
             this.label1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label1.Location = new System.Drawing.Point(56, 89);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(123, 38);
+            this.label1.Size = new System.Drawing.Size(82, 25);
             this.label1.TabIndex = 17;
             this.label1.Text = "Usuario";
             // 
@@ -131,14 +131,14 @@
             this.lblAddUser.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.lblAddUser.Location = new System.Drawing.Point(56, 303);
             this.lblAddUser.Name = "lblAddUser";
-            this.lblAddUser.Size = new System.Drawing.Size(200, 31);
+            this.lblAddUser.Size = new System.Drawing.Size(134, 21);
             this.lblAddUser.TabIndex = 20;
             this.lblAddUser.Text = "Agregar Usuario";
             this.lblAddUser.Click += new System.EventHandler(this.lblAddUser_Click);
             // 
             // FrmLog
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(18F, 38F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.BlueViolet;
             this.BackgroundImage = global::Presentacion.Ferreteria.Properties.Resources.Business_Card_Brackets;

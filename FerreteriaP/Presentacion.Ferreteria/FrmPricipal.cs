@@ -50,5 +50,10 @@ namespace Presentacion.Ferreteria
         {
             Application.Exit();
         }
+
+        private void FrmPricipal_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

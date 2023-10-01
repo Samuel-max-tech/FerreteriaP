@@ -51,7 +51,7 @@
             this.btnCerrar.ForeColor = System.Drawing.Color.Transparent;
             this.btnCerrar.Image = global::Presentacion.Ferreteria.Properties.Resources.cerrar;
             this.btnCerrar.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnCerrar.Location = new System.Drawing.Point(597, 28);
+            this.btnCerrar.Location = new System.Drawing.Point(519, 25);
             this.btnCerrar.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(40, 38);
@@ -82,7 +82,7 @@
             // cbxeditar
             // 
             this.cbxeditar.AutoSize = true;
-            this.cbxeditar.Location = new System.Drawing.Point(62, 124);
+            this.cbxeditar.Location = new System.Drawing.Point(62, 151);
             this.cbxeditar.Name = "cbxeditar";
             this.cbxeditar.Size = new System.Drawing.Size(83, 29);
             this.cbxeditar.TabIndex = 3;
@@ -92,7 +92,7 @@
             // cbxeliminar
             // 
             this.cbxeliminar.AutoSize = true;
-            this.cbxeliminar.Location = new System.Drawing.Point(180, 124);
+            this.cbxeliminar.Location = new System.Drawing.Point(180, 151);
             this.cbxeliminar.Name = "cbxeliminar";
             this.cbxeliminar.Size = new System.Drawing.Size(104, 29);
             this.cbxeliminar.TabIndex = 4;
@@ -102,7 +102,7 @@
             // cbxvisualizar
             // 
             this.cbxvisualizar.AutoSize = true;
-            this.cbxvisualizar.Location = new System.Drawing.Point(317, 70);
+            this.cbxvisualizar.Location = new System.Drawing.Point(313, 70);
             this.cbxvisualizar.Name = "cbxvisualizar";
             this.cbxvisualizar.Size = new System.Drawing.Size(118, 29);
             this.cbxvisualizar.TabIndex = 5;
@@ -115,9 +115,9 @@
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.Image = global::Presentacion.Ferreteria.Properties.Resources.icons8_guardar_30;
             this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardar.Location = new System.Drawing.Point(62, 277);
+            this.btnGuardar.Location = new System.Drawing.Point(424, 198);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(171, 40);
+            this.btnGuardar.Size = new System.Drawing.Size(135, 40);
             this.btnGuardar.TabIndex = 7;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -130,9 +130,9 @@
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Image = global::Presentacion.Ferreteria.Properties.Resources.icons8_cancelar_30;
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelar.Location = new System.Drawing.Point(317, 277);
+            this.btnCancelar.Location = new System.Drawing.Point(424, 275);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(171, 40);
+            this.btnCancelar.Size = new System.Drawing.Size(135, 40);
             this.btnCancelar.TabIndex = 8;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -143,9 +143,9 @@
             // 
             this.cmbUsuarios.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.cmbUsuarios.Location = new System.Drawing.Point(62, 199);
+            this.cmbUsuarios.Location = new System.Drawing.Point(62, 203);
             this.cmbUsuarios.Name = "cmbUsuarios";
-            this.cmbUsuarios.Size = new System.Drawing.Size(222, 33);
+            this.cmbUsuarios.Size = new System.Drawing.Size(281, 33);
             this.cmbUsuarios.TabIndex = 6;
             // 
             // FrmAgregarPermisos
@@ -156,7 +156,7 @@
             this.BackColor = System.Drawing.Color.MediumSlateBlue;
             this.BackgroundImage = global::Presentacion.Ferreteria.Properties.Resources.Business_Card_Brackets;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(652, 379);
+            this.ClientSize = new System.Drawing.Size(595, 379);
             this.Controls.Add(this.cmbUsuarios);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnGuardar);

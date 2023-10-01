@@ -1,5 +1,5 @@
-﻿using Entidades; 
-using AccesoDatos.Ferreteria; 
+﻿using Entidades;
+using AccesoDatos.Ferreteria;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -45,4 +45,3 @@ namespace LogicaNegocio.Ferreteria
         }
     }
 }
-
