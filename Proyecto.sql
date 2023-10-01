@@ -52,6 +52,39 @@ END if;
 END;
 //
 
+delimiter //
+CREATE PROCEDURE P_ValidarPermisos(
+    IN usuario_id INT,
+    IN permiso_acceso BOOLEAN,
+    IN permiso_agregar BOOLEAN,
+    IN permiso_editar BOOLEAN,
+    IN permiso_eliminar BOOLEAN,
+    IN permiso_visualizar BOOLEAN,
+    OUT tiene_permisos BOOLEAN
+)
+BEGIN 
+    DECLARE acceso_permiso BOOLEAN;
+    DECLARE agregar_permiso BOOLEAN;
+    DECLARE editar_permiso BOOLEAN;
+    DECLARE eliminar_permiso BOOLEAN;
+    DECLARE visualizar_permiso BOOLEAN;
+    
+    SELECT acceso, agregar, editar, eliminar, visualizar
+    INTO acceso_permiso, agregar_permiso, editar_permiso, eliminar_permiso, visualizar_permiso
+    FROM permisos
+    WHERE fkidusuario = usuario_id;
+
+    IF (acceso_permiso = permiso_acceso AND
+        agregar_permiso = permiso_agregar AND
+        editar_permiso = permiso_editar AND
+        eliminar_permiso = permiso_eliminar AND
+        visualizar_permiso = permiso_visualizar) THEN
+        SET tiene_permisos = TRUE;
+    ELSE
+        SET tiene_permisos = FALSE;
+    END IF;
+END //
+
 CALL P_Validar(Admin)
 
 SELECT usuario,contrasena FROM usuarios WHERE usuario = 'Samuel' AND contrasena = SHA1('1010');
