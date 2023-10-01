@@ -25,7 +25,8 @@ namespace Presentacion.Ferreteria
 
         private void toolStripMenuItem3_Click(object sender, EventArgs e)
         {
-
+            FrmAgregarPermisos fap =new FrmAgregarPermisos();
+            fap.ShowDialog();
         }
 
         private void toolStripMenuItem4_Click(object sender, EventArgs e)
@@ -38,6 +39,21 @@ namespace Presentacion.Ferreteria
         {
             FrmAgregarHerramienta fa = new FrmAgregarHerramienta();
             fa.ShowDialog();
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void FrmPricipal_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

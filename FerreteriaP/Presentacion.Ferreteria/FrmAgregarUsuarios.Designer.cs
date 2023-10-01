@@ -181,6 +181,7 @@
             this.DtgUsuarios.RowHeadersWidth = 62;
             this.DtgUsuarios.Size = new System.Drawing.Size(840, 231);
             this.DtgUsuarios.TabIndex = 44;
+            this.DtgUsuarios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DtgUsuarios_CellContentClick);
             this.DtgUsuarios.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DtgUsuarios_CellDoubleClick);
             // 
             // btnCerrar
@@ -261,11 +262,11 @@
             // label8
             // 
             this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(423, 160);
+            this.label8.Location = new System.Drawing.Point(430, 160);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(248, 30);
             this.label8.TabIndex = 54;
-            this.label8.Text = "Clave";
+            this.label8.Text = "Contraseña";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // txtusuario
@@ -326,6 +327,7 @@
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "FrmAgregarUsuarios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

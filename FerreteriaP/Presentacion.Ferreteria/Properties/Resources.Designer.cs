@@ -63,6 +63,26 @@ namespace Presentacion.Ferreteria.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Business_Card_Brackets {
+            get {
+                object obj = ResourceManager.GetObject("Business-Card-Brackets", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cerrar {
+            get {
+                object obj = ResourceManager.GetObject("cerrar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_añadir_30 {
             get {
                 object obj = ResourceManager.GetObject("icons8-añadir-30", resourceCulture);

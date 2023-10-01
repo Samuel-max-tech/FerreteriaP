@@ -48,3 +48,5 @@ C:\Users\smart\OneDrive\Escritorio\FerreteriaP\FerreteriaP\Presentacion.Ferreter
 C:\Users\smart\OneDrive\Escritorio\FerreteriaP\FerreteriaP\Presentacion.Ferreteria\obj\Debug\Presentacion.Ferreteria.FrmAgregarHerramienta.resources
 C:\Users\smart\OneDrive\Escritorio\FerreteriaP\FerreteriaP\Presentacion.Ferreteria\obj\Debug\Presentacion.Ferreteria.FrmAgregarProducto.resources
 C:\Users\smart\OneDrive\Escritorio\FerreteriaP\FerreteriaP\Presentacion.Ferreteria\obj\Debug\Presentacion.Ferreteria.FrmPricipal.resources
+C:\Users\smart\OneDrive\Escritorio\FerreteriaP\FerreteriaP\Presentacion.Ferreteria\obj\Debug\Presentacion.Ferreteria.FrmLog.resources
+C:\Users\smart\OneDrive\Escritorio\FerreteriaP\FerreteriaP\Presentacion.Ferreteria\obj\Debug\Presentacion.Ferreteria.FrmAgregarPermisos.resources

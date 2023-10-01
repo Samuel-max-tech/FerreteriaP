@@ -67,8 +67,7 @@ namespace AccesoDatos.Ferreteria
         }
         public void ActualizarHerramienta(Herramientas NuevaHerramienta)
         {
-            string consulta = string.Format
-            ("update herramientas set nombreh='{0}',medidah='{1}',marca='{2}',descripcionh='{3}' where CodigoHerramienta = {4}",
+            string consulta = string.Format("update herramientas set nombreh='{0}',medidah='{1}',marcah='{2}',descripcionh='{3}' where CodigoHerramienta = {4}",
             NuevaHerramienta.Nombreh,NuevaHerramienta.Medidah,NuevaHerramienta.Marcah,NuevaHerramienta.Descripcionh, NuevaHerramienta.CodigoHerramienta);
             conexion.EjecutarConsulta(consulta);
         }

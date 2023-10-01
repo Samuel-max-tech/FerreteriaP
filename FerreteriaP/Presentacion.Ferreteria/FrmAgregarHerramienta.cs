@@ -71,14 +71,6 @@ namespace Presentacion.Ferreteria
             else
                 MessageBox.Show(validar.Item2, "Error de Campos", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
-        private void Eliminar()
-        {
-            if (MessageBox.Show("estas segur@ que Deseas eliminar a este Usuari@", "Eliminar Usuario", MessageBoxButtons.YesNo) == DialogResult.Yes)
-            {
-                var codigoherramientas = int.Parse(DtgHerramientas.CurrentRow.Cells["CodigoHerramienta"].Value.ToString());
-                _herramientaslogica.EliminarHerramienta(codigoherramientas);
-            }
-        }
         private void ModificarHerramienta()
         {
             Herramientas nuevaherramienta = new Herramientas();
@@ -96,10 +88,17 @@ namespace Presentacion.Ferreteria
                 LimpiarTextBox();
                 ControlarBotones(true, false, false, true, true);
                 ControlCuadros(false);
-                txtCH.Focus();
             }
             else
                 MessageBox.Show(validar.Item2, "Error de Campos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+        private void Eliminar()
+        {
+            if (MessageBox.Show("estas segur@ que Deseas eliminar a este Usuari@", "Eliminar Usuario", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                var codigoherramientas = int.Parse(DtgHerramientas.CurrentRow.Cells["CodigoHerramienta"].Value.ToString());
+                _herramientaslogica.EliminarHerramienta(codigoherramientas);
+            }
         }
         private void Buscar(string valor)
         {
