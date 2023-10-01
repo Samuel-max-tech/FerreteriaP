@@ -19,10 +19,8 @@ namespace LogicaNegocio.Ferreteria
         {
             List<string> nombresUsuarios = new List<string>();
 
-            // Obtener los datos de la capa de acceso a datos
             DataTable dt = permisosAccesoDatos.ObtenerNombresUsuarios();
 
-            // Recorrer los resultados y añadir los nombres de usuario a la lista
             foreach (DataRow fila in dt.Rows)
             {
                 nombresUsuarios.Add(fila["usuario"].ToString());
@@ -32,7 +30,6 @@ namespace LogicaNegocio.Ferreteria
         }
         public List<Usuarios> ObtenerUsuariosConPermisos()
         {
-            // Obtén la lista de Usuarios con permisos de la capa de acceso a datos
             List<Usuarios> usuariosConPermisos = permisosAccesoDatos.ObtenerUsuariosConPermisos();
 
             return usuariosConPermisos;

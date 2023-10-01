@@ -40,7 +40,6 @@ namespace AccesoDatos.Ferreteria
                     Fechanacimiento = row["fechanacimiento"].ToString(),
                     Rfc = row["rfc"].ToString(),
                     Usuario = row["usuario"].ToString(),
-                    // ... otras propiedades si las tienes ...
                 };
 
                 usuariosConPermisos.Add(usuario);
