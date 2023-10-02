@@ -14,10 +14,15 @@ namespace Presentacion.Ferreteria
 {
     public partial class FrmLog : Form
     {
+        public bool acceso = false;
+        public bool agregar = false;
+        public bool editar = false;
+        public bool eliminar = false;
+        public bool visualiar = false;
         PermisosLogica prgl;
         string[] arreglo = null;
         public string usuario = "";
-        Permisos permisos = new Permisos();
+        Usuarios permisos = new Usuarios();
         PermisosLogica perlog;
         LogLogica log;
         public FrmLog()

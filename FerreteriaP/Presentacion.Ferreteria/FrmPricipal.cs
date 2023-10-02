@@ -45,12 +45,6 @@ namespace Presentacion.Ferreteria
             fa.ShowDialog();
         }
 
-        private void toolStripMenuItem3_Click(object sender, EventArgs e)
-        {
-            FrmAgregarPermisos fap =new FrmAgregarPermisos();
-            fap.ShowDialog();
-        }
-
         private void toolStripMenuItem4_Click(object sender, EventArgs e)
         {
             FrmAgregarProducto fa = new FrmAgregarProducto(agregar,editar,eliminar);

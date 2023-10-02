@@ -80,6 +80,7 @@ namespace LogicaNegocio.Ferreteria
                 mensaje = mensaje + "El Campo Clave es Reqerido \n";
                 valida = false;
             }
+
             var validar = new Tuple<bool, string>(valida, mensaje);
             return validar;
         }

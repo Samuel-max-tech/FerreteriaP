@@ -93,6 +93,11 @@ namespace Presentacion.Ferreteria
             nuevousuario.Rfc=txtrfc.Text;
             nuevousuario.Usuario = txtusuario.Text;
             nuevousuario.Contrasena = txtContrasena.Text;
+            nuevousuario.Acceso = cbxacceso.Checked;
+            nuevousuario.Agregar = cbxagregar.Checked;
+            nuevousuario.Editar = cbxeditar.Checked;
+            nuevousuario.Eliminar = cbxeliminar.Checked;
+            nuevousuario.Visualizar = cbxvisualizar.Checked;
             var validar = _usuarioslogica.ValidadUsuario(nuevousuario);
             if (validar.Item1)
             {
@@ -116,6 +121,11 @@ namespace Presentacion.Ferreteria
             nuevousuario.Rfc = txtrfc.Text;
             nuevousuario.Usuario = txtusuario.Text;
             nuevousuario.Contrasena = txtContrasena.Text;
+            nuevousuario.Acceso=cbxacceso.Checked;
+            nuevousuario.Agregar = cbxagregar.Checked;
+            nuevousuario.Editar = cbxeditar.Checked;
+            nuevousuario.Eliminar = cbxeliminar.Checked;
+            nuevousuario.Visualizar = cbxvisualizar.Checked;
             var validar = _usuarioslogica.ValidadUsuario(nuevousuario);
             if (validar.Item1)
             {
@@ -193,6 +203,12 @@ namespace Presentacion.Ferreteria
             txtusuario.Text = DtgUsuarios.CurrentRow.Cells["usuario"].Value.ToString();
             txtContrasena.Text = DtgUsuarios.CurrentRow.Cells["contrasena"].Value.ToString();
             idusuarios = int.Parse(DtgUsuarios.CurrentRow.Cells["idusuario"].Value.ToString());
+            idusuarios = int.Parse(DtgUsuarios.CurrentRow.Cells["idusuario"].Value.ToString());
+            cbxacceso.Checked = bool.Parse(DtgUsuarios.CurrentRow.Cells["acceso"].Value.ToString());
+            cbxagregar.Checked = bool.Parse(DtgUsuarios.CurrentRow.Cells["agregar"].Value.ToString());
+            cbxeditar.Checked = bool.Parse(DtgUsuarios.CurrentRow.Cells["editar"].Value.ToString());
+            cbxeliminar.Checked = bool.Parse(DtgUsuarios.CurrentRow.Cells["eliminar"].Value.ToString());
+            cbxvisualizar.Checked = bool.Parse(DtgUsuarios.CurrentRow.Cells["visualizar"].Value.ToString());
             banderaGuardar = "Modificar";
         }
 
@@ -224,6 +240,11 @@ namespace Presentacion.Ferreteria
             txtusuario.Text = DtgUsuarios.CurrentRow.Cells["usuario"].Value.ToString();
             txtContrasena.Text = "";
             idusuarios = int.Parse(DtgUsuarios.CurrentRow.Cells["idusuario"].Value.ToString());
+            cbxacceso.Checked = bool.Parse(DtgUsuarios.CurrentRow.Cells["acceso"].Value.ToString());
+            cbxagregar.Checked = bool.Parse(DtgUsuarios.CurrentRow.Cells["agregar"].Value.ToString());
+            cbxeditar.Checked = bool.Parse(DtgUsuarios.CurrentRow.Cells["editar"].Value.ToString());
+            cbxeliminar.Checked = bool.Parse(DtgUsuarios.CurrentRow.Cells["eliminar"].Value.ToString());
+            cbxvisualizar.Checked = bool.Parse(DtgUsuarios.CurrentRow.Cells["visualizar"].Value.ToString());
             banderaGuardar = "Modificar";
         }
     }

@@ -33,6 +33,11 @@ namespace AccesoDatos.Ferreteria
                     Rfc = renglon["rfc"].ToString(),
                     Usuario = renglon["usuario"].ToString(),
                     Contrasena = renglon["contrasena"].ToString(),
+                    Acceso = bool.Parse(renglon["acceso"].ToString()),
+                    Agregar = bool.Parse(renglon["agregar"].ToString()),
+                    Editar = bool.Parse(renglon["editar"].ToString()),
+                    Eliminar = bool.Parse(renglon["eliminar"].ToString()),
+                    Visualizar = bool.Parse(renglon["visualizar"].ToString())
                 };
                 ListaUsuarios.Add(usuario);
             }
@@ -40,9 +45,9 @@ namespace AccesoDatos.Ferreteria
         }
         public void GuardarUsuario(Usuarios nuevousuario)
         {
-            string Consulta = string.Format("Insert Into usuarios values(null,'{0}','{1}','{2}','{3}','{4}','{5}',Sha1('{6}'));",
-            nuevousuario.Nombre,nuevousuario.Apellidop,nuevousuario.Apellidom,
-            nuevousuario.Fechanacimiento,nuevousuario.Rfc,nuevousuario.Usuario,nuevousuario.Contrasena);
+            string Consulta = string.Format("Insert Into usuarios values(null,'{0}','{1}','{2}','{3}','{4}','{5}',Sha1('{6}'),{7},{8},{9},{10},{11});",
+            nuevousuario.Nombre,nuevousuario.Apellidop,nuevousuario.Apellidom,nuevousuario.Fechanacimiento,nuevousuario.Rfc,nuevousuario.Usuario,nuevousuario.Contrasena,nuevousuario.Acceso,
+            nuevousuario.Agregar,nuevousuario.Editar,nuevousuario.Eliminar,nuevousuario.Visualizar);
             conexion.EjecutarConsulta(Consulta);
         }
         public List<Usuarios> BuscarUsuario(string valor)
@@ -63,6 +68,11 @@ namespace AccesoDatos.Ferreteria
                     Rfc = renglon["rfc"].ToString(),
                     Usuario = renglon["usuario"].ToString(),
                     Contrasena = renglon["contrasena"].ToString(),
+                    Acceso = bool.Parse(renglon["acceso"].ToString()),
+                    Agregar = bool.Parse(renglon["agregar"].ToString()),
+                    Editar = bool.Parse(renglon["editar"].ToString()),
+                    Eliminar = bool.Parse(renglon["eliminar"].ToString()),
+                    Visualizar = bool.Parse(renglon["visualizar"].ToString())
                 };
                 ListaUsuarios.Add(usuario);
             }
@@ -75,8 +85,8 @@ namespace AccesoDatos.Ferreteria
         }
         public void ActualizarUsuarios(Usuarios NuevoUsuario)
         {
-            string consulta = string.Format("update usuarios set nombre='{0}',apellidop='{1}',apellidom='{2}',fechanacimiento='{3}',rfc='{4}',usuario='{5}',contrasena=sha1('{6}') where idusuario={7} ",
-            NuevoUsuario.Nombre,NuevoUsuario.Apellidop,NuevoUsuario.Apellidom,NuevoUsuario.Fechanacimiento,NuevoUsuario.Rfc,NuevoUsuario.Usuario,NuevoUsuario.Contrasena,NuevoUsuario.IdUsuario);
+            string consulta = string.Format("update usuarios set nombre='{0}',apellidop='{1}',apellidom='{2}',fechanacimiento='{3}',rfc='{4}',usuario='{5}',contrasena=sha1('{6}'),acceso={7},agregar={8},editar={9},eliminar={10},visualizar={11} where idusuario={12} ",
+            NuevoUsuario.Nombre,NuevoUsuario.Apellidop,NuevoUsuario.Apellidom,NuevoUsuario.Fechanacimiento,NuevoUsuario.Rfc,NuevoUsuario.Usuario,NuevoUsuario.Contrasena,NuevoUsuario.Acceso, NuevoUsuario.Agregar, NuevoUsuario.Editar, NuevoUsuario.Eliminar, NuevoUsuario.Visualizar, NuevoUsuario.IdUsuario);
             conexion.EjecutarConsulta(consulta);
         }
 

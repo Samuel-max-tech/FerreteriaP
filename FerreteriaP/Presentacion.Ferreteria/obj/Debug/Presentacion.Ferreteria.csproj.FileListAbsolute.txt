@@ -2,7 +2,6 @@ C:\Users\smart\OneDrive\Escritorio\FerreteriaP\FerreteriaP\Presentacion.Ferreter
 C:\Users\smart\OneDrive\Escritorio\FerreteriaP\FerreteriaP\Presentacion.Ferreteria\obj\Debug\Presentacion.Ferreteria.csproj.SuggestedBindingRedirects.cache
 C:\Users\smart\OneDrive\Escritorio\FerreteriaP\FerreteriaP\Presentacion.Ferreteria\obj\Debug\Presentacion.Ferreteria.exe.config
 C:\Users\smart\OneDrive\Escritorio\FerreteriaP\FerreteriaP\Presentacion.Ferreteria\obj\Debug\Presentacion.Ferreteria.FrmAgregarHerramienta.resources
-C:\Users\smart\OneDrive\Escritorio\FerreteriaP\FerreteriaP\Presentacion.Ferreteria\obj\Debug\Presentacion.Ferreteria.FrmAgregarPermisos.resources
 C:\Users\smart\OneDrive\Escritorio\FerreteriaP\FerreteriaP\Presentacion.Ferreteria\obj\Debug\Presentacion.Ferreteria.FrmAgregarProducto.resources
 C:\Users\smart\OneDrive\Escritorio\FerreteriaP\FerreteriaP\Presentacion.Ferreteria\obj\Debug\Presentacion.Ferreteria.FrmAgregarUsuarios.resources
 C:\Users\smart\OneDrive\Escritorio\FerreteriaP\FerreteriaP\Presentacion.Ferreteria\obj\Debug\Presentacion.Ferreteria.FrmLog.resources

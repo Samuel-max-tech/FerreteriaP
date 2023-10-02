@@ -1,5 +1,6 @@
 CREATE DATABASE Ferreteria;
 
+INSERT INTO usuarios VALUES(NULL,'Samuel','Martin','Munoz','18 de Junio del 2003','asdasdas','samuel',SHA1('si'),TRUE,TRUE,TRUE,TRUE,TRUE);
 CREATE TABLE usuarios(
 idusuario INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
 nombre VARCHAR(100), 
@@ -8,24 +9,20 @@ apellidom VARCHAR(50),
 fechanacimiento VARCHAR(50),
 rfc VARCHAR(13),
 usuario VARCHAR(50),
-contrasena VARCHAR(50));
-
-CREATE TABLE permisos(
+contrasena VARCHAR(50),
 acceso BOOLEAN,
 agregar BOOLEAN,
 editar BOOLEAN,
 eliminar BOOLEAN,
-visualizar BOOLEAN,
-fkidusuario INT PRIMARY KEY,FOREIGN KEY(fkidusuario) REFERENCES usuarios(idusuario));
+visualizar BOOLEAN);
+
+DROP TABLE usuarios;
 
 CREATE TABLE productos(
 CodigoBarras INT PRIMARY KEY NOT NULL,
 nombrep VARCHAR(50),
 descripcionp VARCHAR(50),
 marcap VARCHAR(50));
-
-DROP TABLE productos;
-DROP TABLE herramientas;
 
 CREATE TABLE herramientas(
 CodigoHerramienta INT PRIMARY KEY NOT NULL,
@@ -52,60 +49,33 @@ END;
 //
 
 DROP PROCEDURE if EXISTS p_permisos;
-delimiter //
-CREATE PROCEDURE p_Permisos(
-IN _usuario VARCHAR(100)
+DELIMITER //
+CREATE PROCEDURE P_Permisos(
+    IN _usuario VARCHAR(100)
 )
 BEGIN 
-DECLARE _acceso BOOLean;
-DECLARE _agregar BOOLean;
-DECLARE _editar BOOLean;
-DECLARE _eliminar BOOLean;
-DECLARE _visualizar BOOlean;
+    DECLARE _acceso BOOLEAN;
+    DECLARE _agregar BOOLEAN;
+    DECLARE _editar BOOLEAN;
+    DECLARE _eliminar BOOLEAN;
+    DECLARE _visualizar BOOLEAN;
 
-SELECT p.acceso
-FROM usuarios u 
-JOIN permisos p ON  u.idusuario = p.fkidusuario 
-WHERE _usuario  = u.usuario INTO _acceso;
+    SELECT acceso, agregar, editar, eliminar, visualizar 
+    INTO _acceso, _agregar, _editar, _eliminar, _visualizar
+    FROM usuarios 
+    WHERE usuario = _usuario;
 
-SELECT p.agregar
-FROM usuarios u 
-JOIN permisos p ON  u.idusuario = p.fkidusuario 
-WHERE _usuario  = u.usuario INTO _agregar;
-
-SELECT p.editar
-FROM usuarios u 
-JOIN permisos p ON  u.idusuario = p.fkidusuario 
-WHERE _usuario  = u.usuario INTO _editar;
-
-SELECT p.eliminar
-FROM usuarios u 
-JOIN permisos p ON  u.idusuario = p.fkidusuario 
-WHERE _usuario  = u.usuario INTO _eliminar;
-
-SELECT p.visualizar
-FROM usuarios u 
-JOIN permisos p ON  u.idusuario = p.fkidusuario 
-WHERE _usuario  = u.usuario INTO _visualizar;
-
-SELECT CONCAT(_acceso,',',_agregar,',',_editar,',',_eliminar,',',_visualizar) AS rs;
-
+    SELECT CONCAT(_acceso, ',', _agregar, ',', _editar, ',', _eliminar, ',', _visualizar) AS rs;
 END;
 //
 
-SELECT p.acceso,p.agregar,p.editar,p.eliminar,p.visualizar
-FROM usuarios u 
-JOIN permisos p ON  u.idusuario = p.fkidusuario 1
-WHERE u.usuario = 'Pepe';
-
-CALL p_permisos('Samuel');
+CALL P_Permisos('LM');
 
 SELECT * FROM usuarios WHERE usuario = 'LM';
 
 SELECT * FROM permisos;
 
-INSERT INTO permisos VALUES(true,true,true,TRUE,true,2);
-INSERT INTO permisos VALUES(FALSE,FALSE,FALSE ,FALSE ,FALSE ,3);
+INSERT 
 
 
 

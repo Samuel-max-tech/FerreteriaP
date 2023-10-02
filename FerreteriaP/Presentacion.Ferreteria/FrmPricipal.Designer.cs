@@ -31,7 +31,6 @@
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -54,7 +53,6 @@
             // 
             this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem2,
-            this.toolStripMenuItem3,
             this.toolStripMenuItem4,
             this.toolStripMenuItem5});
             this.toolStripMenuItem1.Image = global::Presentacion.Ferreteria.Properties.Resources.icons8_lista_30;
@@ -66,23 +64,15 @@
             // 
             this.toolStripMenuItem2.Image = global::Presentacion.Ferreteria.Properties.Resources.users_icon_icons_com_57999;
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(153, 30);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(188, 30);
             this.toolStripMenuItem2.Text = "Usuarios";
             this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
-            // 
-            // toolStripMenuItem3
-            // 
-            this.toolStripMenuItem3.Image = global::Presentacion.Ferreteria.Properties.Resources.icons8_gambler_10;
-            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(153, 30);
-            this.toolStripMenuItem3.Text = "Permisos";
-            this.toolStripMenuItem3.Click += new System.EventHandler(this.toolStripMenuItem3_Click);
             // 
             // toolStripMenuItem4
             // 
             this.toolStripMenuItem4.Image = global::Presentacion.Ferreteria.Properties.Resources.icons8_package_10;
             this.toolStripMenuItem4.Name = "toolStripMenuItem4";
-            this.toolStripMenuItem4.Size = new System.Drawing.Size(153, 30);
+            this.toolStripMenuItem4.Size = new System.Drawing.Size(188, 30);
             this.toolStripMenuItem4.Text = "Productos";
             this.toolStripMenuItem4.Click += new System.EventHandler(this.toolStripMenuItem4_Click);
             // 
@@ -90,7 +80,7 @@
             // 
             this.toolStripMenuItem5.Image = global::Presentacion.Ferreteria.Properties.Resources.icons8_full_tool_storage_box_10;
             this.toolStripMenuItem5.Name = "toolStripMenuItem5";
-            this.toolStripMenuItem5.Size = new System.Drawing.Size(153, 30);
+            this.toolStripMenuItem5.Size = new System.Drawing.Size(188, 30);
             this.toolStripMenuItem5.Text = "Herramientas";
             this.toolStripMenuItem5.Click += new System.EventHandler(this.toolStripMenuItem5_Click);
             // 
@@ -129,7 +119,6 @@
         private System.Windows.Forms.MenuStrip menuStrip2;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem4;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem5;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
