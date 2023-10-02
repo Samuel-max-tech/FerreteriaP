@@ -14,27 +14,30 @@ namespace Presentacion.Ferreteria
 {
     public partial class FrmAgregarProducto : Form
     {
+        public bool agregar;
+        public bool editar;
+        public bool eliminar;
         private ProductosLogica  _productoslogica;
         private string banderaGuardar = " ";
         private string codigobarras = "";
-        public FrmAgregarProducto()
+        public FrmAgregarProducto( bool ag, bool ed, bool el)
         {
             InitializeComponent();
             _productoslogica = new ProductosLogica();
+            ControlarBotones(agregar=ag,editar=ed,eliminar=el);
         }
+
         private void FrmAgregarProductos(object sender, EventArgs e)
         {
-            ControlarBotones(true, false, false, true, true);
             ControlCuadros(false);
             LlenarProducto();
         }
-        private void ControlarBotones(Boolean nuevo, Boolean guardar, Boolean cancelar, Boolean cerrar, Boolean eliminar)
+        private void ControlarBotones(Boolean escribir, Boolean eliminar, Boolean actualizar)
         {
-            btnNuevo.Enabled = nuevo;
-            btnGuardar.Enabled = guardar;
-            btnCancelar.Enabled = cancelar;
+            btnNuevo.Enabled = escribir;
             btnEliminar.Enabled = eliminar;
-            btnCerrar.Enabled = cerrar;
+            btnGuardar.Enabled = actualizar;
+            btnCancelar .Enabled = false;
         }
         private void ControlCuadros(Boolean estado)
         {
@@ -67,7 +70,6 @@ namespace Presentacion.Ferreteria
                 _productoslogica.GuardarProducto(nuevoproducto);
                 LlenarProducto();
                 LimpiarTextBox();
-                ControlarBotones(true, false, false, true, true);
                 ControlCuadros(false);
             }
             else
@@ -95,7 +97,6 @@ namespace Presentacion.Ferreteria
                 _productoslogica.ActualizarProducto(nuevoproducto);
                 LlenarProducto();
                 LimpiarTextBox();
-                ControlarBotones(true, false, false, true, true);
                 ControlCuadros(false);
                 txtCB.Focus();
             }
@@ -115,9 +116,9 @@ namespace Presentacion.Ferreteria
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            ControlarBotones(true, false, false, true, true);
             ControlCuadros(false);
             LimpiarTextBox();
+            ControlarBotones(agregar, editar, eliminar);
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -139,8 +140,8 @@ namespace Presentacion.Ferreteria
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
-            ControlarBotones(false, true, true, false, false);
             ControlCuadros(true);
+            btnCancelar.Enabled = true;
             txtCB.Focus();
             banderaGuardar = "Guardar";
         }
@@ -152,14 +153,12 @@ namespace Presentacion.Ferreteria
 
         private void FrmAgregarProducto_Load(object sender, EventArgs e)
         {
-            ControlarBotones(true, false, false, true, true);
             ControlCuadros(false);
             LlenarProducto();
         }
 
         private void DtgProductos_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            ControlarBotones(false, true, true, false, false);
             ControlCuadros(true);
             txtCB.Focus();
             txtCB.Text = DtgProductos.CurrentRow.Cells["CodigoBarras"].Value.ToString();

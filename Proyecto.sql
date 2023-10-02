@@ -34,7 +34,6 @@ medidah VARCHAR(50),
 marcah VARCHAR(50), 
 descripcionh VARCHAR(50));
 
-INSERT INTO Administradores VALUES(NULL,'luis',SHA1('12345'));
 
 delimiter //
 CREATE PROCEDURE P_Validar(
@@ -52,38 +51,63 @@ END if;
 END;
 //
 
+DROP PROCEDURE if EXISTS p_permisos;
 delimiter //
-CREATE PROCEDURE P_ValidarPermisos(
-    IN usuario_id INT,
-    IN permiso_acceso BOOLEAN,
-    IN permiso_agregar BOOLEAN,
-    IN permiso_editar BOOLEAN,
-    IN permiso_eliminar BOOLEAN,
-    IN permiso_visualizar BOOLEAN,
-    OUT tiene_permisos BOOLEAN
+CREATE PROCEDURE p_Permisos(
+IN _usuario VARCHAR(100)
 )
 BEGIN 
-    DECLARE acceso_permiso BOOLEAN;
-    DECLARE agregar_permiso BOOLEAN;
-    DECLARE editar_permiso BOOLEAN;
-    DECLARE eliminar_permiso BOOLEAN;
-    DECLARE visualizar_permiso BOOLEAN;
-    
-    SELECT acceso, agregar, editar, eliminar, visualizar
-    INTO acceso_permiso, agregar_permiso, editar_permiso, eliminar_permiso, visualizar_permiso
-    FROM permisos
-    WHERE fkidusuario = usuario_id;
+DECLARE _acceso BOOLean;
+DECLARE _agregar BOOLean;
+DECLARE _editar BOOLean;
+DECLARE _eliminar BOOLean;
+DECLARE _visualizar BOOlean;
 
-    IF (acceso_permiso = permiso_acceso AND
-        agregar_permiso = permiso_agregar AND
-        editar_permiso = permiso_editar AND
-        eliminar_permiso = permiso_eliminar AND
-        visualizar_permiso = permiso_visualizar) THEN
-        SET tiene_permisos = TRUE;
-    ELSE
-        SET tiene_permisos = FALSE;
-    END IF;
-END //
+SELECT p.acceso
+FROM usuarios u 
+JOIN permisos p ON  u.idusuario = p.fkidusuario 
+WHERE _usuario  = u.usuario INTO _acceso;
+
+SELECT p.agregar
+FROM usuarios u 
+JOIN permisos p ON  u.idusuario = p.fkidusuario 
+WHERE _usuario  = u.usuario INTO _agregar;
+
+SELECT p.editar
+FROM usuarios u 
+JOIN permisos p ON  u.idusuario = p.fkidusuario 
+WHERE _usuario  = u.usuario INTO _editar;
+
+SELECT p.eliminar
+FROM usuarios u 
+JOIN permisos p ON  u.idusuario = p.fkidusuario 
+WHERE _usuario  = u.usuario INTO _eliminar;
+
+SELECT p.visualizar
+FROM usuarios u 
+JOIN permisos p ON  u.idusuario = p.fkidusuario 
+WHERE _usuario  = u.usuario INTO _visualizar;
+
+SELECT CONCAT(_acceso,',',_agregar,',',_editar,',',_eliminar,',',_visualizar) AS rs;
+
+END;
+//
+
+SELECT p.acceso,p.agregar,p.editar,p.eliminar,p.visualizar
+FROM usuarios u 
+JOIN permisos p ON  u.idusuario = p.fkidusuario 1
+WHERE u.usuario = 'Pepe';
+
+CALL p_permisos('Samuel');
+
+SELECT * FROM usuarios WHERE usuario = 'LM';
+
+SELECT * FROM permisos;
+
+INSERT INTO permisos VALUES(true,true,true,TRUE,true,2);
+INSERT INTO permisos VALUES(FALSE,FALSE,FALSE ,FALSE ,FALSE ,3);
+
+
 
 CALL P_Validar(Admin)
 

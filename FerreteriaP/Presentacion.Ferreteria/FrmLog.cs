@@ -14,6 +14,9 @@ namespace Presentacion.Ferreteria
 {
     public partial class FrmLog : Form
     {
+        PermisosLogica prgl;
+        string[] arreglo = null;
+        public string usuario = "";
         Permisos permisos = new Permisos();
         PermisosLogica perlog;
         LogLogica log;
@@ -22,6 +25,7 @@ namespace Presentacion.Ferreteria
             InitializeComponent();
             log = new LogLogica();
             perlog = new PermisosLogica();
+            prgl = new PermisosLogica();
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
@@ -32,11 +36,14 @@ namespace Presentacion.Ferreteria
         private void btnIniciar_Click(object sender, EventArgs e)
         {
 
-                if (log.ValidarAcceso(txtUsuario.Text, txtContrasena.Text))
-                {
-                    FrmPricipal p = new FrmPricipal();
-                    p.Show();
+            if (log.ValidarAcceso(txtUsuario.Text, txtContrasena.Text))
+            {
+                    Permisos(txtUsuario.Text);
+                    FrmPricipal p = new FrmPricipal(arreglo[0], arreglo[1], arreglo[2], arreglo[3], arreglo[4]);
                     Hide();
+                    txtUsuario.Text = usuario;
+                    p.ShowDialog();
+                    this.Close();
                 }
             else
                 MessageBox.Show("Error de credenciales");
@@ -46,6 +53,10 @@ namespace Presentacion.Ferreteria
             FrmAgregarUsuarios fa = new FrmAgregarUsuarios();
             fa.ShowDialog();
         }
-
+        private void Permisos(string usuarios)
+        {
+            string permisos = prgl.Permisos(usuarios);
+            arreglo = permisos.Split(',');
+        }
     }
 }

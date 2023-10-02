@@ -50,9 +50,9 @@
             this.btnCerrar.ForeColor = System.Drawing.Color.Transparent;
             this.btnCerrar.Image = global::Presentacion.Ferreteria.Properties.Resources.cerrar;
             this.btnCerrar.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnCerrar.Location = new System.Drawing.Point(478, 33);
+            this.btnCerrar.Location = new System.Drawing.Point(477, 33);
             this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(28, 25);
+            this.btnCerrar.Size = new System.Drawing.Size(29, 27);
             this.btnCerrar.TabIndex = 4;
             this.btnCerrar.UseVisualStyleBackColor = false;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
@@ -157,6 +157,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "FrmLog";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmLog";
             this.ResumeLayout(false);
             this.PerformLayout();

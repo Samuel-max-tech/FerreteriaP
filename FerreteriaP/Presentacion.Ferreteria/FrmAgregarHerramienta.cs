@@ -14,21 +14,24 @@ namespace Presentacion.Ferreteria
 {
     public partial class FrmAgregarHerramienta : Form
     {
+        public bool agregar;
+        public bool editar;
+        public bool eliminar;
         private HerramientasLogica _herramientaslogica;
         private string banderaGuardar = " ";
         private int codigoherramientas = 0 ;
-        public FrmAgregarHerramienta()
+        public FrmAgregarHerramienta(bool ag, bool ed, bool el)
         {
             InitializeComponent();
             _herramientaslogica = new HerramientasLogica();
+            ControlarBotones(agregar = ag, editar = ed, eliminar = el);
         }
-        private void ControlarBotones(Boolean nuevo, Boolean guardar, Boolean cancelar, Boolean cerrar, Boolean eliminar)
+        private void ControlarBotones(Boolean escribir, Boolean eliminar, Boolean actualizar)
         {
-            btnNuevo.Enabled = nuevo;
-            btnGuardar.Enabled = guardar;
-            btnCancelar.Enabled = cancelar;
+            btnNuevo.Enabled = escribir;
+            btnGuardar.Enabled = actualizar;
             btnEliminar.Enabled = eliminar;
-            btnCerrar.Enabled = cerrar;
+            btnCancelar.Enabled = false;
         }
         private void ControlCuadros(Boolean estado)
         {
@@ -65,7 +68,6 @@ namespace Presentacion.Ferreteria
                 _herramientaslogica.GuardarHerramienta(nuevaherramienta);
                 LlenarHerramienta();
                 LimpiarTextBox();
-                ControlarBotones(true, false, false, true, true);
                 ControlCuadros(false);
             }
             else
@@ -86,7 +88,6 @@ namespace Presentacion.Ferreteria
                 _herramientaslogica.ActualizarHerramienta(nuevaherramienta);
                 LlenarHerramienta();
                 LimpiarTextBox();
-                ControlarBotones(true, false, false, true, true);
                 ControlCuadros(false);
             }
             else
@@ -106,9 +107,9 @@ namespace Presentacion.Ferreteria
         }
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            ControlarBotones(true, false, false, true, true);
             ControlCuadros(false);
             LimpiarTextBox();
+            ControlarBotones(agregar, editar, eliminar);
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -124,7 +125,6 @@ namespace Presentacion.Ferreteria
 
         private void FrmAgregarHerramienta_Load(object sender, EventArgs e)
         {
-            ControlarBotones(true, false, false, true, true);
             ControlCuadros(false);
             LlenarHerramienta();
         }
@@ -148,7 +148,6 @@ namespace Presentacion.Ferreteria
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
-            ControlarBotones(false, true, true, false, false);
             ControlCuadros(true);
             txtCH.Focus();
             banderaGuardar = "Guardar";
@@ -156,7 +155,6 @@ namespace Presentacion.Ferreteria
 
         private void DtgHerramientas_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            ControlarBotones(false, true, true, false, false);
             ControlCuadros(true);
             txtCH.Focus();
             txtCH.Text = DtgHerramientas.CurrentRow.Cells["CodigoHerramienta"].Value.ToString();
@@ -166,6 +164,11 @@ namespace Presentacion.Ferreteria
             txtMarca.Text = DtgHerramientas.CurrentRow.Cells["marcah"].Value.ToString();
             txtDescripcion.Text = DtgHerramientas.CurrentRow.Cells["descripcionh"].Value.ToString();
             banderaGuardar = "Modificar";
+        }
+
+        private void txtDescripcion_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
