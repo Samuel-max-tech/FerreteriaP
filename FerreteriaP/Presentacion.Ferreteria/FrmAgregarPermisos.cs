@@ -29,27 +29,7 @@ namespace Presentacion.Ferreteria
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            if (cmbUsuarios.SelectedItem != null)
-            {
-                Usuarios usuario = (Usuarios)cmbUsuarios.SelectedItem;
-                Permisos permisos = new Permisos
-                {
-                    Acceso = cbxacceso.Checked,
-                    Agregar = cbxagregar.Checked,
-                    Editar = cbxeditar.Checked,
-                    Eliminar = cbxeliminar.Checked,
-                    Visualizar = cbxvisualizar.Checked,
-                    Fkidusuario = usuario.IdUsuario
-                };
-
-                permisosLogica.ActualizarPermisos(permisos);
-
-                MessageBox.Show("Permisos guardados correctamente.");
-            }
-            else
-            {
-                MessageBox.Show("Selecciona un usuario.");
-            }
+            
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -65,19 +45,9 @@ namespace Presentacion.Ferreteria
             cbxvisualizar.Checked = false;
         }
 
-        private void CargarUsuarios()
-        {
-            List<string> nombresUsuarios = permisosLogica.ObtenerNombresUsuariosConPermisos();
-
-            foreach (string nombreUsuario in nombresUsuarios)
-            {
-                cmbUsuarios.Items.Add(nombreUsuario);
-            }
-        }
-
         private void FrmAgregarPermisos_Load(object sender, EventArgs e)
         {
-            CargarUsuarios();
+
         }
     }
 }

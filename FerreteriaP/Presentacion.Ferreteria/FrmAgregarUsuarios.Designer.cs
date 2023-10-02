@@ -51,6 +51,11 @@
             this.txtusuario = new System.Windows.Forms.TextBox();
             this.txtContrasena = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.cbxvisualizar = new System.Windows.Forms.CheckBox();
+            this.cbxeliminar = new System.Windows.Forms.CheckBox();
+            this.cbxeditar = new System.Windows.Forms.CheckBox();
+            this.cbxagregar = new System.Windows.Forms.CheckBox();
+            this.cbxacceso = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.DtgUsuarios)).BeginInit();
             this.SuspendLayout();
             // 
@@ -149,7 +154,7 @@
             this.label6.BackColor = System.Drawing.Color.Blue;
             this.label6.Location = new System.Drawing.Point(15, 258);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(834, 10);
+            this.label6.Size = new System.Drawing.Size(1102, 10);
             this.label6.TabIndex = 37;
             // 
             // txtBuscar
@@ -157,7 +162,7 @@
             this.txtBuscar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtBuscar.Location = new System.Drawing.Point(91, 295);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(761, 33);
+            this.txtBuscar.Size = new System.Drawing.Size(1028, 33);
             this.txtBuscar.TabIndex = 6;
             this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
@@ -179,7 +184,7 @@
             this.DtgUsuarios.Location = new System.Drawing.Point(12, 342);
             this.DtgUsuarios.Name = "DtgUsuarios";
             this.DtgUsuarios.RowHeadersWidth = 62;
-            this.DtgUsuarios.Size = new System.Drawing.Size(840, 231);
+            this.DtgUsuarios.Size = new System.Drawing.Size(1107, 231);
             this.DtgUsuarios.TabIndex = 44;
             this.DtgUsuarios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DtgUsuarios_CellContentClick);
             this.DtgUsuarios.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DtgUsuarios_CellDoubleClick);
@@ -190,7 +195,7 @@
             this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrar.Image = global::Presentacion.Ferreteria.Properties.Resources.icons8_salida_30;
             this.btnCerrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCerrar.Location = new System.Drawing.Point(734, 579);
+            this.btnCerrar.Location = new System.Drawing.Point(1001, 579);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(118, 40);
             this.btnCerrar.TabIndex = 50;
@@ -205,7 +210,7 @@
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminar.Image = global::Presentacion.Ferreteria.Properties.Resources.icons8_eliminar_30;
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminar.Location = new System.Drawing.Point(527, 579);
+            this.btnEliminar.Location = new System.Drawing.Point(798, 579);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(125, 40);
             this.btnEliminar.TabIndex = 49;
@@ -220,7 +225,7 @@
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Image = global::Presentacion.Ferreteria.Properties.Resources.icons8_cancelar_30;
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelar.Location = new System.Drawing.Point(343, 579);
+            this.btnCancelar.Location = new System.Drawing.Point(547, 579);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(131, 40);
             this.btnCancelar.TabIndex = 48;
@@ -235,7 +240,7 @@
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.Image = global::Presentacion.Ferreteria.Properties.Resources.icons8_guardar_30;
             this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardar.Location = new System.Drawing.Point(174, 579);
+            this.btnGuardar.Location = new System.Drawing.Point(336, 579);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(124, 40);
             this.btnGuardar.TabIndex = 47;
@@ -297,12 +302,68 @@
             this.label9.Text = "Usuario";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // cbxvisualizar
+            // 
+            this.cbxvisualizar.AutoSize = true;
+            this.cbxvisualizar.Location = new System.Drawing.Point(865, 194);
+            this.cbxvisualizar.Name = "cbxvisualizar";
+            this.cbxvisualizar.Size = new System.Drawing.Size(118, 29);
+            this.cbxvisualizar.TabIndex = 59;
+            this.cbxvisualizar.Text = "Visualizar";
+            this.cbxvisualizar.UseVisualStyleBackColor = true;
+            // 
+            // cbxeliminar
+            // 
+            this.cbxeliminar.AutoSize = true;
+            this.cbxeliminar.Location = new System.Drawing.Point(983, 122);
+            this.cbxeliminar.Name = "cbxeliminar";
+            this.cbxeliminar.Size = new System.Drawing.Size(104, 29);
+            this.cbxeliminar.TabIndex = 58;
+            this.cbxeliminar.Text = "Eliminar";
+            this.cbxeliminar.UseVisualStyleBackColor = true;
+            // 
+            // cbxeditar
+            // 
+            this.cbxeditar.AutoSize = true;
+            this.cbxeditar.Location = new System.Drawing.Point(865, 122);
+            this.cbxeditar.Name = "cbxeditar";
+            this.cbxeditar.Size = new System.Drawing.Size(83, 29);
+            this.cbxeditar.TabIndex = 57;
+            this.cbxeditar.Text = "Editar";
+            this.cbxeditar.UseVisualStyleBackColor = true;
+            // 
+            // cbxagregar
+            // 
+            this.cbxagregar.AutoSize = true;
+            this.cbxagregar.Location = new System.Drawing.Point(983, 41);
+            this.cbxagregar.Name = "cbxagregar";
+            this.cbxagregar.Size = new System.Drawing.Size(104, 29);
+            this.cbxagregar.TabIndex = 56;
+            this.cbxagregar.Text = "Agregar";
+            this.cbxagregar.UseVisualStyleBackColor = true;
+            // 
+            // cbxacceso
+            // 
+            this.cbxacceso.AutoSize = true;
+            this.cbxacceso.Location = new System.Drawing.Point(865, 41);
+            this.cbxacceso.Name = "cbxacceso";
+            this.cbxacceso.Size = new System.Drawing.Size(96, 29);
+            this.cbxacceso.TabIndex = 55;
+            this.cbxacceso.Text = "Acceso";
+            this.cbxacceso.UseVisualStyleBackColor = true;
+            // 
             // FrmAgregarUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.ClientSize = new System.Drawing.Size(887, 638);
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1131, 638);
+            this.Controls.Add(this.cbxvisualizar);
+            this.Controls.Add(this.cbxeliminar);
+            this.Controls.Add(this.cbxeditar);
+            this.Controls.Add(this.cbxagregar);
+            this.Controls.Add(this.cbxacceso);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txtusuario);
             this.Controls.Add(this.txtContrasena);
@@ -326,6 +387,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.label1);
+            this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(6);
@@ -364,6 +426,11 @@
         private System.Windows.Forms.TextBox txtusuario;
         private System.Windows.Forms.TextBox txtContrasena;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.CheckBox cbxvisualizar;
+        private System.Windows.Forms.CheckBox cbxeliminar;
+        private System.Windows.Forms.CheckBox cbxeditar;
+        private System.Windows.Forms.CheckBox cbxagregar;
+        private System.Windows.Forms.CheckBox cbxacceso;
     }
 }
 

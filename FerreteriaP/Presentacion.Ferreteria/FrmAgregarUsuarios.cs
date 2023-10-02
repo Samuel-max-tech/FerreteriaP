@@ -26,7 +26,7 @@ namespace Presentacion.Ferreteria
 
         private void FrmAgregarUsuarios_Load(object sender, EventArgs e)
         {
-            ControlarBotones(true, false, false, true, true);
+            ControlarBotones(true, false, true, true, true);
             ControlCuadros(false);
             LlenarUsuario();
         }
@@ -47,6 +47,19 @@ namespace Presentacion.Ferreteria
             txtrfc.Enabled = estado;
             txtusuario.Enabled = estado;
             txtContrasena.Enabled = estado;
+            cbxacceso.Enabled = estado;
+            cbxagregar.Enabled = estado;
+            cbxeditar.Enabled = estado;
+            cbxeliminar.Enabled = estado;
+            cbxvisualizar.Enabled = estado;
+        }
+        private void Volvervalorcbx()
+        {
+            cbxacceso.Checked = false;
+            cbxagregar.Checked = false;
+            cbxeditar.Checked = false;
+            cbxeliminar.Checked = false;
+            cbxvisualizar.Checked = false;
         }
         private void LlenarUsuario()
         {
@@ -146,6 +159,7 @@ namespace Presentacion.Ferreteria
         {
             ControlarBotones(true, false, false, true, true);
             ControlCuadros(false);
+            Volvervalorcbx();
             LimpiarTextBox();
         }
 
