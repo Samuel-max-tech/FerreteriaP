@@ -53,13 +53,21 @@ namespace Presentacion.Ferreteria
             cbxeliminar.Enabled = estado;
             cbxvisualizar.Enabled = estado;
         }
-        private void Volvervalorcbx()
+        private void Volvervalorcbx(bool estado)
         {
-            cbxacceso.Checked = false;
-            cbxagregar.Checked = false;
-            cbxeditar.Checked = false;
-            cbxeliminar.Checked = false;
-            cbxvisualizar.Checked = false;
+            cbxacceso.Checked = estado;
+            cbxagregar.Checked = estado;
+            cbxeditar.Checked = estado;
+            cbxeliminar.Checked = estado;
+            cbxvisualizar.Checked = estado;
+        }
+        private void Activarvalorcbx(bool estado)
+        {
+            cbxacceso.Enabled = estado;
+            cbxagregar.Enabled = estado;
+            cbxeditar.Enabled = estado;
+            cbxeliminar.Enabled = estado;
+            cbxvisualizar.Enabled = estado;
         }
         private void LlenarUsuario()
         {
@@ -159,7 +167,7 @@ namespace Presentacion.Ferreteria
         {
             ControlarBotones(true, false, false, true, true);
             ControlCuadros(false);
-            Volvervalorcbx();
+            Volvervalorcbx(false);
             LimpiarTextBox();
         }
 
@@ -173,6 +181,7 @@ namespace Presentacion.Ferreteria
         {
             ControlarBotones(false, true, true, false, false);
             ControlCuadros(true);
+            Activarvalorcbx(false);
             txtNombre.Focus();
             txtusuario.Enabled = false;
             txtContrasena.Enabled = false;
@@ -200,6 +209,7 @@ namespace Presentacion.Ferreteria
         {
             ControlarBotones(false, true, true, false, false);
             ControlCuadros(true);
+            Activarvalorcbx(true);
             txtNombre.Focus();
             txtNombre.Text = DtgUsuarios.CurrentRow.Cells["nombre"].Value.ToString();
             txtApellidoP.Text = DtgUsuarios.CurrentRow.Cells["apellidop"].Value.ToString();

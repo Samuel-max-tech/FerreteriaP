@@ -40,6 +40,7 @@ namespace Presentacion.Ferreteria
 
         private void toolStripMenuItem2_Click(object sender, EventArgs e)
         {
+            
             FrmAgregarUsuarios fa = new FrmAgregarUsuarios();
             fa.ShowDialog();
         }
