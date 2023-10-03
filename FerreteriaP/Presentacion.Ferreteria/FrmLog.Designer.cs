@@ -35,7 +35,6 @@
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.lblAddUser = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnCerrar
@@ -123,19 +122,6 @@
             this.label1.TabIndex = 17;
             this.label1.Text = "Usuario";
             // 
-            // lblAddUser
-            // 
-            this.lblAddUser.AutoSize = true;
-            this.lblAddUser.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblAddUser.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Underline);
-            this.lblAddUser.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lblAddUser.Location = new System.Drawing.Point(56, 303);
-            this.lblAddUser.Name = "lblAddUser";
-            this.lblAddUser.Size = new System.Drawing.Size(134, 21);
-            this.lblAddUser.TabIndex = 20;
-            this.lblAddUser.Text = "Agregar Usuario";
-            this.lblAddUser.Click += new System.EventHandler(this.lblAddUser_Click);
-            // 
             // FrmLog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 25F);
@@ -144,7 +130,6 @@
             this.BackgroundImage = global::Presentacion.Ferreteria.Properties.Resources.Business_Card_Brackets;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(518, 394);
-            this.Controls.Add(this.lblAddUser);
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnIniciar);
@@ -173,6 +158,5 @@
         private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label lblAddUser;
     }
 }

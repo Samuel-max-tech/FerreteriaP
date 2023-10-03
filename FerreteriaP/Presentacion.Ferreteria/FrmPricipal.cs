@@ -77,7 +77,7 @@ namespace Presentacion.Ferreteria
             else
             {
                 MessageBox.Show("No tienes permiso");
-                toolStripMenuItem5.Enabled = false;
+                toolStripMenuItem5.Enabled = false; 
             }
         }
 
@@ -87,6 +87,11 @@ namespace Presentacion.Ferreteria
             Hide();
             fl.ShowDialog();
            this.Close();
+        }
+
+        private void FrmPricipal_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

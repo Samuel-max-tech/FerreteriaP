@@ -64,7 +64,7 @@
             // 
             this.toolStripMenuItem2.Image = global::Presentacion.Ferreteria.Properties.Resources.users_icon_icons_com_57999;
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(188, 30);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(153, 30);
             this.toolStripMenuItem2.Text = "Usuarios";
             this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
             // 
@@ -72,7 +72,7 @@
             // 
             this.toolStripMenuItem4.Image = global::Presentacion.Ferreteria.Properties.Resources.icons8_package_10;
             this.toolStripMenuItem4.Name = "toolStripMenuItem4";
-            this.toolStripMenuItem4.Size = new System.Drawing.Size(188, 30);
+            this.toolStripMenuItem4.Size = new System.Drawing.Size(153, 30);
             this.toolStripMenuItem4.Text = "Productos";
             this.toolStripMenuItem4.Click += new System.EventHandler(this.toolStripMenuItem4_Click);
             // 
@@ -80,7 +80,7 @@
             // 
             this.toolStripMenuItem5.Image = global::Presentacion.Ferreteria.Properties.Resources.icons8_full_tool_storage_box_10;
             this.toolStripMenuItem5.Name = "toolStripMenuItem5";
-            this.toolStripMenuItem5.Size = new System.Drawing.Size(188, 30);
+            this.toolStripMenuItem5.Size = new System.Drawing.Size(153, 30);
             this.toolStripMenuItem5.Text = "Herramientas";
             this.toolStripMenuItem5.Click += new System.EventHandler(this.toolStripMenuItem5_Click);
             // 
@@ -107,6 +107,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmPricipal1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.FrmPricipal_Load);
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();
             this.ResumeLayout(false);
