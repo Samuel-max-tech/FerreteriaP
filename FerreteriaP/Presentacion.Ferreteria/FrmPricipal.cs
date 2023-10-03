@@ -40,21 +40,45 @@ namespace Presentacion.Ferreteria
 
         private void toolStripMenuItem2_Click(object sender, EventArgs e)
         {
-            
-            FrmAgregarUsuarios fa = new FrmAgregarUsuarios();
-            fa.ShowDialog();
+            if ( visualiar == true)
+            {
+                FrmAgregarUsuarios fa = new FrmAgregarUsuarios();
+                fa.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("No tienes permiso");
+                toolStripMenuItem2.Enabled = false;
+            }
         }
 
         private void toolStripMenuItem4_Click(object sender, EventArgs e)
         {
-            FrmAgregarProducto fa = new FrmAgregarProducto(agregar,editar,eliminar);
-            fa.ShowDialog();
+            if (visualiar == true)
+            {
+                FrmAgregarProducto fp = new FrmAgregarProducto(agregar, editar, eliminar);
+                fp.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("No tienes permiso");
+                toolStripMenuItem4.Enabled = false;
+            }
+
         }
 
         private void toolStripMenuItem5_Click(object sender, EventArgs e)
         {
-            FrmAgregarHerramienta fa = new FrmAgregarHerramienta(agregar, editar, eliminar);
-            fa.ShowDialog();
+            if (visualiar == true)
+            {
+                FrmAgregarHerramienta fh = new FrmAgregarHerramienta(agregar, editar, eliminar);
+                fh.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("No tienes permiso");
+                toolStripMenuItem5.Enabled = false;
+            }
         }
 
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
@@ -63,11 +87,6 @@ namespace Presentacion.Ferreteria
             Hide();
             fl.ShowDialog();
            this.Close();
-        }
-
-        private void FrmPricipal_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
